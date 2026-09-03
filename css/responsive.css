@@ -23,28 +23,7 @@
     padding: 100px 28px 42px;
   }
 
-  /* ── Components: Project Cards ── */
-  .pc__floating {
-    padding: 24px 24px 22px;
-  }
-
-  .pc__title {
-    font-size: clamp(1.8rem, 4vw, 3.2rem);
-  }
-
-  .pc__sub {
-    font-size: 0.92rem;
-  }
-
-  .pf-block--half {
-    gap: 14px;
-  }
-
-  .pc--half .pc__title {
-    font-size: clamp(1.3rem, 2.8vw, 2rem);
-  }
-
-  /* ── Components: Footer ── */
+  /* Components: Footer */
   .footer-grid {
     grid-template-columns: 1.4fr 1fr;
     gap: 2rem;
@@ -123,7 +102,7 @@
     font-size: clamp(20px, 3.5vw, 32px);
   }
 
-  /* ── Home: Projects Section ── */
+  /* Projects section */
   .projects-section {
     padding: 6rem 0;
   }
@@ -132,12 +111,13 @@
     margin-bottom: 2.5rem;
   }
 
-  .ps-track .pc {
-    flex: 0 0 min(55vw, 480px);
+  .project-row-link {
+    padding: 2.2rem 1rem;
+    gap: 1.5rem;
   }
 
-  .ps-track .pc__title {
-    font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  .project-row-title {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
   }
 
   /* ── Home: Skills ── */
@@ -237,23 +217,7 @@
     padding: 0.45rem 0.85rem;
   }
 
-  /* ── Projects Page ── */
-  .page {
-    padding: calc(var(--nav-h) + 48px) 28px 80px;
-  }
 
-  .page-header {
-    margin-bottom: 52px;
-  }
-
-  .page-title {
-    font-size: clamp(56px, 10vw, 100px);
-  }
-
-  .page-desc {
-    font-size: 14px;
-    max-width: 400px;
-  }
 }
 
 /* MOBILE (max-width: 767px) */
@@ -314,68 +278,7 @@
     font-size: clamp(28px, 8vw, 44px);
   }
 
-  /* ── Components: Project Cards ── */
-  .pc__floating {
-    padding: 18px 18px 16px;
-  }
-
-  .pc__title {
-    font-size: clamp(1.4rem, 5vw, 2.4rem);
-    margin-bottom: 8px;
-  }
-
-  .pc__sub {
-    font-size: 0.82rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-
-  .pc__tags span {
-    min-height: 28px;
-    padding: 0 10px;
-    font-size: 0.72rem;
-  }
-
-  .pc__cta {
-    font-size: 0.58rem;
-    margin-bottom: 12px;
-  }
-
-  .pc--half .pc__floating {
-    padding: 14px 14px 12px;
-  }
-
-  .pc--half .pc__title {
-    font-size: clamp(1.2rem, 4vw, 1.6rem);
-    margin-bottom: 6px;
-  }
-
-  .pc--half .pc__sub {
-    font-size: 0.78rem;
-    margin-bottom: 8px;
-  }
-
-  .pc--half .pc__tags span {
-    min-height: 24px;
-    padding: 0 8px;
-    font-size: 0.68rem;
-  }
-
-  .pf-block--half {
-    grid-template-columns: 1fr;
-  }
-
-  .pf-block--full .pc__img-wrap,
-  .pc--hero .pc__img-wrap {
-    aspect-ratio: 16 / 10;
-  }
-
-  .pf-block--half .pc__img-wrap,
-  .pc--half .pc__img-wrap {
-    aspect-ratio: 16 / 10;
-  }
-
-  /* ── Components: Footer ── */
+  /* Components: Footer */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -552,78 +455,64 @@
     height: 40px;
   }
 
-  /* ── Home: Projects Section ── */
+  /* Projects section */
   .projects-section {
     padding: 4rem 0;
   }
 
   .projects-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
     margin-bottom: 2rem;
   }
 
-  .ps-sticky {
-    position: relative;
-    height: auto;
+  .projects-hover-preview {
+    display: none;
   }
 
-  .ps-stage {
-    height: auto;
-    min-height: auto;
-    border-radius: 0;
-    overflow: visible;
-  }
-
-  .ps-track {
+  .project-row-link {
     flex-direction: column;
-    gap: 16px;
-    padding: 0;
-    height: auto;
+    align-items: flex-start;
+    padding: 2rem 0;
+    gap: 1.2rem;
   }
 
-  .ps-track .pc {
-    flex: none;
+  .project-row-left {
+    gap: 1.2rem;
     width: 100%;
-    height: auto;
-    border-radius: 14px;
   }
 
-  .ps-track .pc__link {
-    height: auto;
+  .project-row-num {
+    font-size: 0.75rem;
+    padding-top: 0.15rem;
   }
 
-  .ps-track .pc__img-wrap {
-    height: auto;
+  .project-row-title {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+    margin: 0.2rem 0;
+  }
+
+  .project-row-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+  }
+
+
+  .project-row-mobile-img {
+    display: block;
+    width: 100%;
     aspect-ratio: 16 / 10;
-  }
-
-  .ps-track .pc__floating {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: auto;
-    padding: 14px 16px;
-  }
-
-  .ps-track .pc__title {
-    font-size: clamp(1.2rem, 5vw, 1.6rem);
-    color: #fff;
-  }
-
-  .ps-track .pc__sub {
-    font-size: 0.78rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    border-radius: 12px;
     overflow: hidden;
+    margin-top: 0.8rem;
+    border: 1px solid var(--project-preview-border);
+    background: var(--bg3);
   }
 
-  .ps-track .pc__tags span {
-    font-size: 9px;
-    padding: 3px 8px;
+  .project-row-mobile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   /* ── Home: Skills ── */
@@ -816,21 +705,5 @@
     padding: 0.4rem 0.7rem;
   }
 
-  /* ── Projects Page ── */
-  .page {
-    padding: calc(var(--nav-h) + 32px) 16px 60px;
-  }
 
-  .page-header {
-    margin-bottom: 36px;
-  }
-
-  .page-title {
-    font-size: clamp(48px, 14vw, 80px);
-  }
-
-  .page-desc {
-    font-size: 13px;
-    max-width: 100%;
-  }
 }

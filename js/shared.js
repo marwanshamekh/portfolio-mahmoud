@@ -12,7 +12,7 @@ const navClose    = document.getElementById('navClose');
 const navOverlay  = document.getElementById('navOverlay');
 const navBackdrop = document.getElementById('navBackdrop');
 
-/*  LOADER */
+/* Loader */
 document.body.style.overflow = 'hidden';
 
 let pct = 0;
@@ -32,7 +32,7 @@ const loadInterval = setInterval(() => {
   }
 }, 80);
 
-/* CUSTOM CURSOR — uses transform instead of left/top to avoid layout thrashing */
+/* Custom cursor */
 if (cursorDot && cursorRing && !('ontouchstart' in window)) {
   let mouseX = 0, mouseY = 0;
   let ringX  = 0, ringY  = 0;
@@ -50,13 +50,13 @@ if (cursorDot && cursorRing && !('ontouchstart' in window)) {
     requestAnimationFrame(animateCursor);
   })();
 } else if (cursorDot && cursorRing) {
-  /* Touch device — hide cursor elements and skip the rAF loop entirely */
+  /* Touch device: hide cursor elements */
   cursorDot.style.display    = 'none';
   cursorRing.style.display   = 'none';
   document.body.style.cursor = 'auto';
 }
 
-/* NAV OVERLAY */
+/* Nav overlay */
 if (navOverlay && !navOverlay.classList.contains('open')) {
   navOverlay.setAttribute('aria-hidden', 'true');
   navOverlay.setAttribute('inert', '');
@@ -79,7 +79,7 @@ function openNav() {
 function closeNav() {
   if (!navOverlay) return;
 
-  // Move focus back to trigger button before marking overlay as hidden/inert
+  // Move focus back to trigger button before marking overlay as hidden or inert
   if (navOverlay.contains(document.activeElement)) {
     if (navOpen) {
       navOpen.focus();
@@ -106,8 +106,7 @@ document.addEventListener('keydown', (e) => {
 
 document.querySelectorAll('.nav-panel a').forEach(l => l.addEventListener('click', closeNav));
 
-/* NAVBAR SCROLL BEHAVIOUR
-  Shared logic — home.js may extend it */
+/* Navbar scroll behavior */
 (function () {
   if (!navbar) return;
   let ticking = false;
@@ -127,14 +126,26 @@ document.querySelectorAll('.nav-panel a').forEach(l => l.addEventListener('click
   }, { passive: true });
 })();
 
+/* Scroll reveal */
 function initReveal() {
+  const elements = document.querySelectorAll('.reveal');
+  if (!elements.length) return;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible', 'is-visible');
       observer.unobserve(entry.target);
     });
-  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.06 });
+  }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el));
+}
+
+if (!loader || loader.classList.contains('done')) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal);
+  } else {
+    initReveal();
+  }
 }

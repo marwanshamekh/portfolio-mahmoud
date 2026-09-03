@@ -81,7 +81,7 @@
       <ul class="nav-panel-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="projects.html">Work</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <p class="nav-socials-label">Socials</p>
@@ -127,11 +127,12 @@
     <div class="container">
 
 
-      <h2 class="about-main-title xp-header-title" id="aboutTitle">ABOUT<span>.</span></h2>
+      <h2 class="about-main-title xp-header-title reveal" id="aboutTitle">ABOUT<span
+          style="color: var(--accent);">.</span></h2>
       <div class="about-divider" id="aboutDivider"></div>
 
 
-      <div class="about-card" id="aboutCard">
+      <div class="about-card reveal" id="aboutCard">
         <div class="about-card-inner">
 
 
@@ -173,7 +174,7 @@
 
             <div class="about-cta-row" id="aboutCtaRow">
               <a href="#contact" class="btn-primary">GET IN TOUCH <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="projects.html" class="btn-ghost">VIEW PROJECTS</a>
+              <a href="#projects" class="btn-ghost">VIEW PROJECTS</a>
             </div>
 
           </div>
@@ -183,11 +184,11 @@
 
     </div>
   </section>
-  
+
   <section id="experience" class="xp-section">
 
 
-    <div class="xp-header">
+    <div class="xp-header reveal">
       <h2 class="xp-header-title">EXPERIENCE<span>.</span></h2>
     </div>
 
@@ -330,134 +331,143 @@
 
       <div class="projects-header reveal">
         <div class="projects-header-left">
-          <h2 class="section-title-xl">PROJECTS<span style="color: #f5c518;">.</span></h2>
+          <h2 class="section-title-xl">PROJECTS<span style="color: var(--accent);">.</span></h2>
         </div>
-        <a href="projects.html" class="view-all-btn">
-          VIEW ALL MY WORKS <i class="fa-solid fa-chevron-right"></i>
-        </a>
       </div>
 
-
-      <div class="ps-outer" id="psOuter">
-        <div class="ps-sticky" id="psSticky">
-          <div class="ps-stage">
-
-            <div class="ps-track" id="psTrack">
-
-
-              <article class="pc" data-index="01">
-                <a href="https://github.com/Shamekh21/Ball-and-Beam-Control-System" target="_blank"
-                  rel="noopener noreferrer" class="pc__link">
-                  <div class="pc__img-wrap">
-                    <img src="assets/images/project(1).webp" alt="Ball and Beam project" class="pc__img" loading="lazy"
-                      decoding="async">
-                    <div class="pc__overlay"></div>
-
-                    <div class="pc__floating">
-                      <div class="pc__topline">
-                        <span class="pc__category">Ball and Beam Control System</span>
-                        <span class="pc__dot">•</span>
-                        <span class="pc__year">2025</span>
-                      </div>
-
-                      <div class="pc__content">
-                        <h3 class="pc__title">BALL &amp; BEAM CONTROL</h3>
-                        <p class="pc__sub">
-                          Real-time PID stabilization of an unstable mechanical system using Arduino, MATLAB, and
-                          ultrasonic feedback.
-                        </p>
-                        <div class="pc__bottom">
-                          <div class="pc__tags">
-                            <span>PID</span>
-                            <span>MATLAB</span>
-                            <span>Arduino</span>
-                            <span>Control Systems</span>
-                          </div>
-                          <span class="pc__cta primary">View Project <span class="pc__arrow">↗</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-
-              <article class="pc" data-index="02">
-                <a href="https://github.com/Shamekh21/Line-Follower-Robot-PID-Control" target="_blank"
-                  rel="noopener noreferrer" class="pc__link">
-                  <div class="pc__img-wrap">
-                    <img src="assets/images/project(2).webp" alt="Line follower robot project" class="pc__img"
-                      loading="lazy" decoding="async">
-                    <div class="pc__overlay"></div>
-
-                    <div class="pc__floating">
-                      <div class="pc__topline">
-                        <span class="pc__category">Line-Follower-Robot-PID-Control</span>
-                        <span class="pc__dot">•</span>
-                        <span class="pc__year">2026</span>
-                      </div>
-
-                      <div class="pc__content">
-                        <h3 class="pc__title">LINE FOLLOWER ROBOT</h3>
-                        <p class="pc__sub">
-                          High-speed autonomous navigation using PID control and real-time sensor feedback.
-                        </p>
-                        <div class="pc__bottom">
-                          <div class="pc__tags">
-                            <span>Arduino</span>
-                            <span>SolidWorks</span>
-                            <span>Embedded C++</span>
-                            <span>PID</span>
-                          </div>
-                          <span class="pc__cta">View Project <span class="pc__arrow">↗</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-
-              <article class="pc" data-index="03">
-                <a href="https://github.com/Shamekh21/Fully-Automated-Industrial-Inspection-Sorting-System-with-Digital-Twin"
-                  target="_blank" class="pc__link">
-                  <div class="pc__img-wrap">
-                    <img src="assets/images/project(4).webp" alt="Industrial Sorting & Digital Twin" class="pc__img"
-                      loading="lazy" decoding="async">
-                    <div class="pc__overlay"></div>
-
-                    <div class="pc__floating">
-                      <div class="pc__topline">
-                        <span class="pc__category">Robotics & AI</span>
-                        <span class="pc__dot">•</span>
-                        <span class="pc__year">2026</span>
-                      </div>
-
-                      <div class="pc__content">
-                        <h3 class="pc__title">AI SORTING & DIGITAL TWIN</h3>
-                        <p class="pc__sub">
-                          Fully automated CPPS integrating PyTorch CNN defect detection, UR5 robotic sorting, MATLAB
-                          kinematics, and CoppeliaSim digital twin.
-                        </p>
-                        <div class="pc__bottom">
-                          <div class="pc__tags">
-                            <span>PyTorch</span>
-                            <span>MATLAB</span>
-                            <span>CoppeliaSim</span>
-                            <span>Arduino</span>
-                          </div>
-                          <span class="pc__cta">View Project <span class="pc__arrow">↗</span></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-            </div>
-
-          </div>
+      <!-- Projects floating preview for cursor hover -->
+      <div class="projects-hover-preview" id="projectsHoverPreview" aria-hidden="true">
+        <div class="projects-preview-inner">
+          <img src="" alt="" class="projects-preview-img" id="projectsPreviewImg" />
         </div>
+      </div>
+
+      <div class="projects-list" id="projectsList">
+
+        <article class="project-row reveal" data-image="assets/images/project(1).webp"
+          data-alt="Ball and Beam Control System">
+          <a href="https://github.com/Shamekh21/Ball-and-Beam-Control-System" target="_blank" rel="noopener noreferrer"
+            class="project-row-link">
+            <div class="project-row-left">
+              <span class="project-row-num">01</span>
+              <div class="project-row-info">
+                <div class="project-row-top">
+                  <span class="project-row-category">Ball and Beam Control System</span>
+                  <span class="project-row-dot">•</span>
+                  <span class="project-row-year">2025</span>
+                </div>
+                <h3 class="project-row-title">BALL &amp; BEAM CONTROL</h3>
+                <p class="project-row-desc">
+                  Real-time PID stabilization of an unstable mechanical system using Arduino, MATLAB, and ultrasonic
+                  feedback.
+                </p>
+                <div class="project-row-tags">
+                  <span class="project-tag">PID</span>
+                  <span class="project-tag">MATLAB</span>
+                  <span class="project-tag">Arduino</span>
+                  <span class="project-tag">Control Systems</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-row-mobile-img">
+              <img src="assets/images/project(1).webp" alt="Ball and Beam Control System" loading="lazy"
+                decoding="async" />
+            </div>
+          </a>
+        </article>
+
+        <article class="project-row reveal" data-image="assets/images/project(2).webp" data-alt="Line Follower Robot">
+          <a href="https://github.com/Shamekh21/Line-Follower-Robot-PID-Control" target="_blank"
+            rel="noopener noreferrer" class="project-row-link">
+            <div class="project-row-left">
+              <span class="project-row-num">02</span>
+              <div class="project-row-info">
+                <div class="project-row-top">
+                  <span class="project-row-category">Line-Follower-Robot-PID-Control</span>
+                  <span class="project-row-dot">•</span>
+                  <span class="project-row-year">2026</span>
+                </div>
+                <h3 class="project-row-title">LINE FOLLOWER ROBOT</h3>
+                <p class="project-row-desc">
+                  High-speed autonomous navigation using PID control and real-time sensor feedback.
+                </p>
+                <div class="project-row-tags">
+                  <span class="project-tag">Arduino</span>
+                  <span class="project-tag">SolidWorks</span>
+                  <span class="project-tag">Embedded C++</span>
+                  <span class="project-tag">PID</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-row-mobile-img">
+              <img src="assets/images/project(2).webp" alt="Line Follower Robot" loading="lazy" decoding="async" />
+            </div>
+          </a>
+        </article>
+
+        <article class="project-row reveal" data-image="assets/images/project(4).webp"
+          data-alt="AI Sorting &amp; Digital Twin">
+          <a href="https://github.com/Shamekh21/Fully-Automated-Industrial-Inspection-Sorting-System-with-Digital-Twin"
+            target="_blank" rel="noopener noreferrer" class="project-row-link">
+            <div class="project-row-left">
+              <span class="project-row-num">03</span>
+              <div class="project-row-info">
+                <div class="project-row-top">
+                  <span class="project-row-category">Robotics &amp; AI</span>
+                  <span class="project-row-dot">•</span>
+                  <span class="project-row-year">2026</span>
+                </div>
+                <h3 class="project-row-title">AI SORTING &amp; DIGITAL TWIN</h3>
+                <p class="project-row-desc">
+                  Fully automated CPPS integrating PyTorch CNN defect detection, UR5 robotic sorting, MATLAB kinematics,
+                  and CoppeliaSim digital twin.
+                </p>
+                <div class="project-row-tags">
+                  <span class="project-tag">PyTorch</span>
+                  <span class="project-tag">MATLAB</span>
+                  <span class="project-tag">CoppeliaSim</span>
+                  <span class="project-tag">Arduino</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-row-mobile-img">
+              <img src="assets/images/project(4).webp" alt="AI Sorting &amp; Digital Twin" loading="lazy"
+                decoding="async" />
+            </div>
+          </a>
+        </article>
+
+        <article class="project-row reveal" data-image="assets/images/project(3).webp"
+          data-alt="Smart Attendance System">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7460744226855845888/" target="_blank"
+            rel="noopener noreferrer" class="project-row-link">
+            <div class="project-row-left">
+              <span class="project-row-num">04</span>
+              <div class="project-row-info">
+                <div class="project-row-top">
+                  <span class="project-row-category">AI &amp; Computer Vision</span>
+                  <span class="project-row-dot">•</span>
+                  <span class="project-row-year">2026</span>
+                </div>
+                <h3 class="project-row-title">SMART ATTENDANCE SYSTEM</h3>
+                <p class="project-row-desc">
+                  AI-powered attendance system featuring real-time face detection, recognition, and automated attendance
+                  management.
+                </p>
+                <div class="project-row-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">YOLOv8</span>
+                  <span class="project-tag">DeepFace</span>
+                  <span class="project-tag">PyQt5</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-row-mobile-img">
+              <img src="assets/images/project(3).webp" alt="Smart Attendance System" loading="lazy" decoding="async" />
+            </div>
+          </a>
+        </article>
+
       </div>
 
     </div>
@@ -468,11 +478,11 @@
     <div class="container">
       <div class="section-header reveal">
         <div>
-          <h2 class="section-title-lg">SKILLS &amp; TOOLKIT<span style="color: #f5c518;">.</span></h2>
+          <h2 class="section-title-lg">SKILLS &amp; TOOLKIT<span style="color: var(--accent);">.</span></h2>
         </div>
       </div>
 
-      <div class="marquee-wrapper">
+      <div class="marquee-wrapper reveal">
 
         <div class="marquee marquee-left">
           <div class="marquee-content">
@@ -594,16 +604,16 @@
   </section>
 
 
-  <section class="certificates-section">
+  <section id="certificates" class="certificates-section">
     <div class="container">
 
       <div class="section-header reveal">
         <div>
-          <h2 class="section-title-lg">CERTIFICATES<span style="color: #f5c518;">.</span></h2>
+          <h2 class="section-title-lg">CERTIFICATES<span style="color: var(--accent);">.</span></h2>
         </div>
       </div>
 
-      <div class="slider-container">
+      <div class="slider-container reveal">
         <div class="slider-track">
 
           <div class="cert-card">
@@ -725,7 +735,7 @@
 
   <section id="quote" class="quote-section">
     <div class="container">
-      <div class="quote-card">
+      <div class="quote-card reveal">
         <div class="quote-mark quote-mark-left">“</div>
 
         <div class="quote-text">
@@ -749,12 +759,12 @@
     <div class="container">
 
 
-      <div class="ct-header">
-        <h2 class="ct-heading">LET'S CONNECT<span style="color: #f5c518;">.</span></h2>
+      <div class="ct-header reveal">
+        <h2 class="ct-heading">LET'S CONNECT<span style="color: var(--accent);">.</span></h2>
       </div>
 
 
-      <div class="ct-email-card ct-card" id="ctEmailCard">
+      <div class="ct-email-card ct-card reveal" id="ctEmailCard">
         <div class="ct-email-inner">
           <div class="ct-email-label">
             <i class="fa-solid fa-envelope"></i>
@@ -772,7 +782,7 @@
       </div>
 
 
-      <div class="ct-social-section">
+      <div class="ct-social-section reveal">
         <div class="ct-social-header">
           <h3 class="ct-social-title">Social Channels</h3>
           <p class="ct-social-sub">Find me on these platforms</p>
@@ -821,7 +831,7 @@
 
 
       <a href="assets/Mahmoud Mohamed Shamekh.pdf" target="_blank" rel="noopener noreferrer" download
-        class="ct-card ct-resume-card">
+        class="ct-card ct-resume-card reveal">
         <div class="ct-resume-icon-wrap">
           <i class="fa-solid fa-file-arrow-down"></i>
         </div>
@@ -834,7 +844,7 @@
       </a>
 
 
-      <div class="ct-collab-card ct-card">
+      <div class="ct-collab-card ct-card reveal">
         <div class="ct-collab-header">
           <h3 class="ct-collab-title">Open to Collaborate On</h3>
         </div>
@@ -866,7 +876,7 @@
 
 
     <div class="footer-body">
-      <div class="container footer-grid">
+      <div class="container footer-grid reveal">
 
 
         <div class="footer-col footer-col--touch">
@@ -886,7 +896,7 @@
           <ul class="footer-nav-list">
             <li><a href="index.html"><span class="footer-nav-dash">——</span> Home</a></li>
             <li><a href="index.html#about"><span class="footer-nav-dash">——</span> About</a></li>
-            <li><a href="projects.html"><span class="footer-nav-dash">——</span> Work</a></li>
+            <li><a href="#projects"><span class="footer-nav-dash">——</span> Work</a></li>
             <li><a href="index.html#contact"><span class="footer-nav-dash">——</span> Contact</a></li>
             <li><a href="index.html#skills"><span class="footer-nav-dash">——</span> Skills</a></li>
             <li><a href="assets/Mahmoud Mohamed Shamekh.pdf" target="_blank" rel="noopener noreferrer" download><span

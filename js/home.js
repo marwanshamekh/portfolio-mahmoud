@@ -214,96 +214,105 @@ const sectionObserver = new IntersectionObserver((entries) => {
 sections.forEach(sec => sectionObserver.observe(sec));
 
 
-/* PROJECTS SECTION — Horizontal scroll handler */
-(function () {
-  'use strict';
+/* Projects hover image preview */
+(function initProjectsPreview() {
+  const projectsSection = document.getElementById('projects');
+  if (!projectsSection) return;
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
+  const preview = document.getElementById('projectsHoverPreview');
+  const previewImg = document.getElementById('projectsPreviewImg');
+  const rows = projectsSection.querySelectorAll('.project-row');
+  const list = document.getElementById('projectsList');
+  if (!preview || !previewImg || !rows.length) return;
+
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let isHovering = false;
+  let rafId = null;
+
+  function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.innerWidth <= 768;
   }
 
-  function init() {
-    var outer = document.getElementById('psOuter');
-    var track = document.getElementById('psTrack');
+  function updatePosition() {
+    if (!isHovering) return;
 
-    if (!outer || !track) return;
+    currentX += (targetX - currentX) * 0.15;
+    currentY += (targetY - currentY) * 0.15;
 
-    var maxTranslate = 0;
-    var ticking = false;
+    preview.style.transform = 'translate3d(' + currentX + 'px, ' + currentY + 'px, 0)';
+    rafId = requestAnimationFrame(updatePosition);
+  }
 
-    function isMobile() {
-      return window.innerWidth <= 768;
+  function setCoordinates(e) {
+    const previewWidth = 360;
+    const previewHeight = 230;
+
+    let x = e.clientX + 25;
+    let y = e.clientY - (previewHeight / 2);
+
+    if (x + previewWidth > window.innerWidth - 20) {
+      x = e.clientX - previewWidth - 25;
+    }
+    if (y < 20) {
+      y = 20;
+    } else if (y + previewHeight > window.innerHeight - 20) {
+      y = window.innerHeight - previewHeight - 20;
     }
 
-    function recalc() {
-      if (isMobile()) {
-        outer.style.height = 'auto';
-        track.style.transform = 'none';
-        return;
+    targetX = x;
+    targetY = y;
+  }
+
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', (e) => {
+      if (isTouchDevice()) return;
+
+      const imgSrc = row.getAttribute('data-image');
+      const imgAlt = row.getAttribute('data-alt') || 'Project preview';
+
+      if (imgSrc && previewImg.getAttribute('src') !== imgSrc) {
+        previewImg.setAttribute('src', imgSrc);
+        previewImg.setAttribute('alt', imgAlt);
       }
 
-      maxTranslate = Math.max(0, track.scrollWidth - track.clientWidth);
-      var extraScreens = Math.max(1, Math.ceil(maxTranslate / window.innerHeight) + 1);
-      outer.style.height = (extraScreens * 100) + 'vh';
-      update();
-    }
-
-    function onScroll() {
-      if (isMobile()) return;
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    }
-
-    function update() {
-      ticking = false;
-      if (isMobile()) return;
-
-      var rect = outer.getBoundingClientRect();
-      var total = outer.offsetHeight - window.innerHeight;
-      if (total <= 0) {
-        track.style.transform = 'translateX(0px)';
-        return;
+      setCoordinates(e);
+      if (!isHovering) {
+        currentX = targetX;
+        currentY = targetY;
+        preview.style.transform = 'translate3d(' + currentX + 'px, ' + currentY + 'px, 0)';
+        isHovering = true;
+        rafId = requestAnimationFrame(updatePosition);
       }
 
-      var scrolled = -rect.top;
-      var progress = scrolled / total;
-      progress = Math.max(0, Math.min(1, progress));
-
-      track.style.transform = 'translateX(-' + (progress * maxTranslate) + 'px)';
-    }
-
-    // Initialize immediately without waiting for images or window.onload
-    recalc();
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(recalc, 100);
-    }, { passive: true });
-
-    // Non-blocking listeners: adjust dimensions if images/fonts finish loading later
-    var images = track.querySelectorAll('img');
-    images.forEach(function (img) {
-      if (!img.complete) {
-        img.addEventListener('load', recalc, { once: true });
-        img.addEventListener('error', recalc, { once: true });
-      }
+      preview.classList.add('is-active');
+      if (list) list.classList.add('has-hovered-item');
+      row.classList.add('is-hovered');
     });
 
-    window.addEventListener('load', recalc);
+    row.addEventListener('mousemove', (e) => {
+      if (isTouchDevice()) return;
+      setCoordinates(e);
+    }, { passive: true });
 
-    if (typeof ResizeObserver !== 'undefined') {
-      var ro = new ResizeObserver(function () {
-        recalc();
-      });
-      ro.observe(track);
-    }
+    row.addEventListener('mouseleave', () => {
+      row.classList.remove('is-hovered');
+    });
+  });
+
+  if (list) {
+    list.addEventListener('mouseleave', () => {
+      isHovering = false;
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      preview.classList.remove('is-active');
+      list.classList.remove('has-hovered-item');
+      rows.forEach(r => r.classList.remove('is-hovered'));
+    });
   }
 })();
 

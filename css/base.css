@@ -21,6 +21,17 @@
   --marquee-bg: #000000;
   --marquee-text: #f5c518;
   --marquee-diamond: #ffffff;
+  /* Project variables */
+  --project-row-border: rgba(255, 255, 255, 0.08);
+  --project-row-hover-border: rgba(245, 197, 24, 0.35);
+  --project-row-hover-bg: rgba(255, 255, 255, 0.02);
+  --project-tag-bg: rgba(255, 255, 255, 0.04);
+  --project-tag-border: rgba(255, 255, 255, 0.12);
+  --project-tag-text: rgba(240, 237, 230, 0.75);
+  --project-tag-hover-bg: rgba(245, 197, 24, 0.12);
+  --project-tag-hover-border: rgba(245, 197, 24, 0.4);
+  --project-preview-shadow: rgba(0, 0, 0, 0.65);
+  --project-preview-border: rgba(255, 255, 255, 0.12);
 }
 
 /* ── Reset ── */
@@ -127,15 +138,7 @@ img {
   padding-bottom: 1.5rem;
 }
 
-.reveal-item {
-  opacity: 0;
-  transform: translateY(40px);
-  will-change: opacity, transform;
-}
-
-
-
-/* ── Reduced Motion ── */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -146,10 +149,12 @@ img {
     scroll-behavior: auto !important;
   }
 
-  .reveal-item,
+  .reveal,
   .intro-top-label,
   .intro-title-line {
     will-change: auto;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .marquee-left .marquee-content,
