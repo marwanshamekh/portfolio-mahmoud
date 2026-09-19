@@ -32,6 +32,7 @@
   font-family: var(--font-mono);
   font-size: 0.6rem;
   letter-spacing: 0.18em;
+  margin-bottom: 3px;
   color: var(--text-dim);
 }
 
@@ -42,7 +43,6 @@
   color: var(--text);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ HERO / INTRO SECTION Ã¢â€â‚¬Ã¢â€â‚¬ */
 .intro-section {
   position: relative;
   width: 100%;
@@ -145,6 +145,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -153,7 +154,7 @@
 .intro-badge:hover {
   transform: scale(1.12);
   filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.45));
-  cursor: none ;
+  cursor: none;
 }
 
 /* About */
@@ -377,6 +378,7 @@
   background: #0a0a0a;
   border-top: 1px solid #222;
 }
+
 .xp-card-body-outer {
   display: grid;
   grid-template-rows: 1fr;
@@ -392,7 +394,7 @@
   opacity: 1;
   transform: translateY(0);
   transition:
-    opacity   0.45s ease 0.05s,
+    opacity 0.45s ease 0.05s,
     transform 0.45s ease 0.05s;
 }
 
@@ -400,7 +402,7 @@
   opacity: 0;
   transform: translateY(8px);
   transition:
-    opacity   0.3s ease,
+    opacity 0.3s ease,
     transform 0.3s ease;
 }
 
@@ -412,8 +414,7 @@
   color: #666;
 }
 
-.xp-card--expanded .xp-card-header {
-}
+.xp-card--expanded .xp-card-header {}
 
 .xp-card-header {
   max-width: 1200px;
@@ -498,8 +499,13 @@
   transition: color 0.4s ease;
 }
 
-.xp-card--expanded .xp-card-company { color: #666; }
-.xp-card--expanded .xp-card-date    { color: #555; }
+.xp-card--expanded .xp-card-company {
+  color: #666;
+}
+
+.xp-card--expanded .xp-card-date {
+  color: #555;
+}
 
 .xp-card-body {
   max-width: 1200px;
@@ -545,7 +551,9 @@
   transition: color 0.3s ease;
 }
 
-.xp-point:hover  { color: #666; }
+.xp-point:hover {
+  color: #666;
+}
 
 .xp-point-bullet {
   font-family: 'DM Sans', sans-serif;
@@ -574,7 +582,9 @@
   transition: color 0.3s ease;
 }
 
-.xp-point:hover .xp-point-text { color: #ffffff; }
+.xp-point:hover .xp-point-text {
+  color: #ffffff;
+}
 
 .xp-tags {
   display: flex;
@@ -639,8 +649,8 @@
   width: 100%;
   border-bottom: 1px solid var(--project-row-border);
   transition: opacity 0.4s cubic-bezier(0.2, 0.65, 0.2, 1),
-              border-color 0.35s ease,
-              background-color 0.35s ease;
+    border-color 0.35s ease,
+    background-color 0.35s ease;
 }
 
 .project-row:first-child {
@@ -784,7 +794,7 @@
   transform: scale(0.85);
   transform-origin: center center;
   transition: opacity 0.35s cubic-bezier(0.2, 0.65, 0.2, 1),
-              transform 0.35s cubic-bezier(0.2, 0.65, 0.2, 1);
+    transform 0.35s cubic-bezier(0.2, 0.65, 0.2, 1);
 }
 
 .projects-hover-preview.is-active .projects-preview-inner {
@@ -1119,9 +1129,9 @@
 }
 
 .quote-text {
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 1.55rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
   letter-spacing: 5px;
   color: var(--text);
@@ -1169,7 +1179,7 @@
   pointer-events: none;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Section header Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* Section header */
 .ct-header {
   margin-bottom: 3.5rem;
 }
@@ -1182,7 +1192,31 @@
   color: var(--text);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Shared card base Ã¢â€â‚¬Ã¢â€â‚¬ */
+.ct-dot {
+  color: var(--accent);
+  display: inline-block;
+}
+
+/* 2-Column layout */
+.ct-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.ct-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.ct-col-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared card base */
 .ct-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1190,14 +1224,14 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.4s ease,
-              box-shadow 0.4s ease;
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .ct-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 197, 24, 0.2);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(245, 197, 24, 0.25);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
 }
 
 .ct-card-glow {
@@ -1217,31 +1251,32 @@
   opacity: 1;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Primary email card Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* Primary email card */
 .ct-email-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 2.5rem;
-  margin-bottom: 2rem;
+  padding: 1.6rem 2rem;
+  margin-bottom: 0;
 }
 
 .ct-email-inner {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .ct-email-label {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.55rem;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.15rem;
 }
 
 .ct-email-label i {
@@ -1250,7 +1285,8 @@
 
 .ct-email-address {
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text);
   transition: color 0.3s ease;
   text-decoration: none;
@@ -1261,39 +1297,42 @@
 }
 
 .ct-email-note {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
   color: var(--text-dim);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
 }
 
 .ct-copy-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   border-radius: 10px;
-  cursor: none;
-  padding: 0.7rem 1.4rem;
+  padding: 0.65rem 1.25rem;
+  cursor: none !important;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
+.ct-copy-btn * {
+  cursor: none !important;
+}
+
 .ct-copy-btn:hover {
   color: var(--accent);
-  border-color: rgba(245, 197, 24, 0.25);
-  background: rgba(245, 197, 24, 0.06);
+  border-color: rgba(245, 197, 24, 0.35);
+  background: rgba(245, 197, 24, 0.08);
 }
 
 .ct-copy-icon,
 .ct-check-icon {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .ct-check-icon {
@@ -1313,26 +1352,31 @@
   pointer-events: none;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Social channels section Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* Social channels section */
 .ct-social-section {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .ct-social-header {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .ct-social-title {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--text);
-  margin-bottom: 0.3rem;
 }
 
 .ct-social-sub {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-dim);
 }
 
@@ -1342,59 +1386,45 @@
   gap: 1rem;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Social card Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* Social card */
 .ct-social-card {
   display: flex;
   flex-direction: column;
-  padding: 1.8rem 1.5rem;
+  padding: 1.3rem 1.2rem;
+  gap: 1rem;
   text-decoration: none;
-  gap: 1.2rem;
+  border-radius: 14px;
 }
 
 .ct-social-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   transition: transform 0.3s ease;
 }
 
 .ct-social-card:hover .ct-social-icon-wrap {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .ct-icon-github {
   background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
 }
 
 .ct-icon-linkedin {
-  background: rgba(10, 102, 194, 0.15);
-  color: #0a66c2;
+  background: #0a66c2;
+  color: #ffffff;
 }
 
 .ct-icon-whatsapp {
-  background: rgba(37, 211, 102, 0.12);
-  color: #25d366;
-}
-
-.ct-social-arrow {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.1rem;
-  color: var(--text-dim);
-  opacity: 0;
-  transform: translate(-4px, 4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.ct-social-card:hover .ct-social-arrow {
-  opacity: 1;
-  transform: translate(0, 0);
+  background: #25d366;
+  color: #ffffff;
 }
 
 .ct-social-info {
@@ -1404,35 +1434,43 @@
 }
 
 .ct-social-name {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.ct-social-card:hover .ct-social-name {
+  color: var(--accent);
 }
 
 .ct-social-handle {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
   color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Resume card Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* Resume card */
 .ct-resume-card {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  padding: 1.8rem 2rem;
-  margin-bottom: 2rem;
+  padding: 1.25rem 1.6rem;
+  margin-bottom: 0;
   text-decoration: none;
+  border-radius: 14px;
 }
 
 .ct-resume-icon-wrap {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(245, 197, 24, 0.1);
-  color: var(--accent);
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #050505;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1442,7 +1480,7 @@
 }
 
 .ct-resume-card:hover .ct-resume-icon-wrap {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
 
 .ct-resume-info {
@@ -1453,74 +1491,184 @@
 }
 
 .ct-resume-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.ct-resume-card:hover .ct-resume-title {
+  color: var(--accent);
 }
 
 .ct-resume-sub {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
   color: var(--text-dim);
 }
 
 .ct-resume-arrow {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--text-dim);
-  opacity: 0;
-  transform: translate(-4px, 4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
   flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .ct-resume-card:hover .ct-resume-arrow {
-  opacity: 1;
-  transform: translate(0, 0);
+  color: var(--accent);
+  transform: translate(2px, -2px);
 }
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ Collaborate section Ã¢â€â‚¬Ã¢â€â‚¬ */
-.ct-collab-card {
-  padding: 2.5rem;
-}
-
-.ct-collab-header {
-  margin-bottom: 1.5rem;
-}
-
-.ct-collab-title {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: 0.04em;
-  color: var(--text);
-}
-
-.ct-chips {
+/* Send a message form card */
+.ct-form-card {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  flex-direction: column;
+  padding: 2.2rem 2.4rem;
+  border-radius: 16px;
+  transition: border-color 0.4s ease;
 }
 
-.ct-chip {
+.ct-card.ct-form-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--border) !important;
+}
+
+.ct-form-header {
+  margin-bottom: 1.8rem;
+}
+
+.ct-form-title {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.ct-form-sub {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  flex: 1;
+}
+
+.ct-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ct-form-label {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-dim);
+}
+
+.ct-input,
+.ct-textarea {
+  width: 100%;
+  background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 0.5rem 1rem;
-  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: text;
 }
 
-.ct-chip:hover {
-  border-color: rgba(245, 197, 24, 0.25);
-  color: var(--accent);
-  background: rgba(245, 197, 24, 0.04);
+.ct-input::placeholder,
+.ct-textarea::placeholder {
+  color: rgba(240, 237, 230, 0.28);
+  font-family: var(--font-body);
 }
 
-/* ─── Copy tooltip ─── */
+.ct-input:focus,
+.ct-textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(20, 20, 20, 0.95);
+  box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.15);
+}
+
+.ct-input.invalid,
+.ct-textarea.invalid {
+  border-color: #ff4d1c;
+  box-shadow: 0 0 0 2px rgba(255, 77, 28, 0.2);
+}
+
+.ct-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.ct-submit-btn {
+  width: 100%;
+  background: var(--accent);
+  color: #050505;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: none !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.ct-submit-btn * {
+  cursor: none !important;
+}
+
+.ct-submit-btn:hover {
+  background: #ffd633;
+  box-shadow: 0 10px 28px rgba(245, 197, 24, 0.35);
+}
+
+
+.ct-submit-btn:disabled {
+  opacity: 0.85;
+  cursor: none !important;
+}
+
+.ct-form-status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  min-height: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.ct-form-status.success {
+  color: #25d366;
+}
+
+.ct-form-status.error {
+  color: #ff4d1c;
+}
+
+/* Copy tooltip */
 .ct-tooltip {
   position: fixed;
   bottom: 2rem;
@@ -1543,4 +1691,3 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
-

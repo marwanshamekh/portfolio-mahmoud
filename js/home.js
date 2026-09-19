@@ -324,7 +324,7 @@ sections.forEach(sec => sectionObserver.observe(sec));
 })();
 
 
-/* COPY EMAIL — Contact section */
+/* Copy email */
 (function initCopyEmail() {
   const copyBtn = document.getElementById('ctCopyBtn');
   const tooltip = document.getElementById('ctTooltip');
@@ -361,6 +361,122 @@ sections.forEach(sec => sectionObserver.observe(sec));
     document.body.removeChild(ta);
     showCopied();
   }
+})();
+
+
+/* Submit form to Google Sheet */
+(function initGoogleSheetForm() {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxzIMqt_NngHQtVlozCeI3tXsd4rkeZngIDeuS0JrxhSksJhrDkG0IG7k7UQczWTVo4Bw/exec';
+  const form = document.forms['submit-to-google-sheet'] || document.getElementById('contactForm');
+  const submitBtn = document.getElementById('ctSubmitBtn');
+  const msg = document.getElementById('msg') || document.getElementById('ctFormStatus');
+  const nameInput = document.getElementById('ctName');
+  const emailInput = document.getElementById('ctEmail');
+  const messageInput = document.getElementById('ctMessage');
+
+  if (!form || !submitBtn) return;
+
+  [nameInput, emailInput, messageInput].forEach(input => {
+    if (!input) return;
+    input.addEventListener('input', () => {
+      input.classList.remove('invalid');
+      if (msg && msg.classList.contains('error')) {
+        msg.textContent = '';
+        msg.className = 'ct-form-status';
+        msg.style.color = '';
+      }
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    let hasError = false;
+
+    if (!name) {
+      if (nameInput) nameInput.classList.add('invalid');
+      hasError = true;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+      if (emailInput) emailInput.classList.add('invalid');
+      hasError = true;
+    }
+
+    if (!message) {
+      if (messageInput) messageInput.classList.add('invalid');
+      hasError = true;
+    }
+
+    if (hasError) {
+      if (msg) {
+        msg.textContent = 'Please fill in all fields with a valid email.';
+        msg.className = 'ct-form-status error';
+        msg.style.color = '#ff4d1c';
+      }
+      return;
+    }
+
+    const originalBtnContent = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+
+    if (msg) {
+      msg.textContent = 'Sending message...';
+      msg.className = 'ct-form-status';
+      msg.style.color = 'var(--text-dim)';
+    }
+
+    const formData = new FormData(form);
+    formData.set('name', name);
+    formData.set('Name', name);
+    formData.set('email', email);
+    formData.set('Email', email);
+    formData.set('message', message);
+    formData.set('Message', message);
+    formData.set('date', new Date().toLocaleString());
+    formData.set('Date', new Date().toLocaleString());
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        if (msg) {
+          msg.textContent = 'Message sent successfully!';
+          msg.className = 'ct-form-status success';
+          msg.style.color = '#25d366';
+        }
+        submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Sent!';
+        submitBtn.style.background = '#25d366';
+        submitBtn.style.color = '#ffffff';
+        form.reset();
+
+        setTimeout(() => {
+          if (msg) {
+            msg.textContent = '';
+            msg.className = 'ct-form-status';
+            msg.style.color = '';
+          }
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+        }, 5000);
+      })
+      .catch(error => {
+        if (msg) {
+          msg.textContent = 'An error occurred. Please try again.';
+          msg.className = 'ct-form-status error';
+          msg.style.color = '#ff4d1c';
+        }
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnContent;
+        console.error('Error!', error.message);
+      });
+  });
 })();
 
 

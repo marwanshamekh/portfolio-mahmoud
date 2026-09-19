@@ -758,113 +758,134 @@
   <section id="contact" class="contact-section">
     <div class="container">
 
-
       <div class="ct-header reveal">
-        <h2 class="ct-heading">LET'S CONNECT<span style="color: var(--accent);">.</span></h2>
+        <h2 class="ct-heading">LET'S CONNECT <span class="ct-dot">.</span></h2>
       </div>
 
+      <div class="ct-layout reveal">
+        <!-- Left column -->
+        <div class="ct-col-left">
 
-      <div class="ct-email-card ct-card reveal" id="ctEmailCard">
-        <div class="ct-email-inner">
-          <div class="ct-email-label">
-            <i class="fa-solid fa-envelope"></i>
-            <span>PRIMARY EMAIL</span>
+          <!-- Primary email card -->
+          <div class="ct-card ct-email-card" id="ctEmailCard">
+            <div class="ct-email-inner">
+              <div class="ct-email-label">
+                <i class="fa-regular fa-envelope"></i>
+                <span>PRIMARY EMAIL</span>
+              </div>
+              <a href="mailto:mmhmdshamekh@gmail.com" class="ct-email-address">mmhmdshamekh@gmail.com</a>
+              <p class="ct-email-note">Usually replies within 24 hours</p>
+            </div>
+            <button type="button" class="ct-copy-btn" id="ctCopyBtn" aria-label="Copy email address" title="Copy email">
+              <i class="fa-regular fa-copy ct-copy-icon"></i>
+              <span class="ct-copy-label">Copy</span>
+            </button>
+            <div class="ct-card-glow"></div>
           </div>
-          <a href="mailto:mmhmdshamekh@gmail.com" class="ct-email-address">mmhmdshamekh@gmail.com</a>
-          <p class="ct-email-note">Usually replies within 24 hours</p>
-        </div>
-        <button class="ct-copy-btn" id="ctCopyBtn" aria-label="Copy email address" title="Copy email">
-          <i class="fa-regular fa-copy ct-copy-icon"></i>
-          <i class="fa-solid fa-check ct-check-icon"></i>
-          <span class="ct-copy-label">Copy</span>
-        </button>
-        <div class="ct-card-glow"></div>
-      </div>
 
-
-      <div class="ct-social-section reveal">
-        <div class="ct-social-header">
-          <h3 class="ct-social-title">Social Channels</h3>
-          <p class="ct-social-sub">Find me on these platforms</p>
-        </div>
-        <div class="ct-social-grid">
-
-          <a href="https://github.com/Shamekh21" target="_blank" rel="noopener" class="ct-card ct-social-card">
-            <div class="ct-social-icon-wrap ct-icon-github">
-              <i class="fa-brands fa-github"></i>
+          <!-- Social channels -->
+          <div class="ct-social-section">
+            <div class="ct-social-header">
+              <h3 class="ct-social-title">SOCIAL CHANNELS</h3>
+              <p class="ct-social-sub">Find me on these platforms</p>
             </div>
-            <div class="ct-social-arrow">↗</div>
-            <div class="ct-social-info">
-              <span class="ct-social-name">GitHub</span>
-              <span class="ct-social-handle">@Shamekh21</span>
+            <div class="ct-social-grid">
+
+              <a href="https://github.com/Shamekh21" target="_blank" rel="noopener" class="ct-card ct-social-card">
+                <div class="ct-social-icon-wrap ct-icon-github">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="ct-social-info">
+                  <span class="ct-social-name">GitHub</span>
+                  <span class="ct-social-handle">@shamekh21</span>
+                </div>
+                <div class="ct-card-glow"></div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/mahmoud-mohamed-7784ab2a5/" target="_blank" rel="noopener"
+                class="ct-card ct-social-card">
+                <div class="ct-social-icon-wrap ct-icon-linkedin">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="ct-social-info">
+                  <span class="ct-social-name">LinkedIn</span>
+                  <span class="ct-social-handle">/in/mahmoud-mohamed</span>
+                </div>
+                <div class="ct-card-glow"></div>
+              </a>
+
+              <a href="https://wa.me/+201146935975" target="_blank" rel="noopener" class="ct-card ct-social-card">
+                <div class="ct-social-icon-wrap ct-icon-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="ct-social-info">
+                  <span class="ct-social-name">WhatsApp</span>
+                  <span class="ct-social-handle">Direct message</span>
+                </div>
+                <div class="ct-card-glow"></div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Resume card -->
+          <a href="assets/Mahmoud Mohamed Shamekh.pdf" target="_blank" rel="noopener noreferrer" download
+            class="ct-card ct-resume-card">
+            <div class="ct-resume-icon-wrap">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="ct-resume-info">
+              <span class="ct-resume-title">Resume</span>
+              <span class="ct-resume-sub">View credentials (PDF)</span>
+            </div>
+            <div class="ct-resume-arrow">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
             <div class="ct-card-glow"></div>
           </a>
 
-          <a href="https://www.linkedin.com/in/mahmoud-mohamed-7784ab2a5/" target="_blank" rel="noopener"
-            class="ct-card ct-social-card">
-            <div class="ct-social-icon-wrap ct-icon-linkedin">
-              <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <!-- Right column: Send a message form -->
+        <div class="ct-col-right">
+          <div class="ct-card ct-form-card">
+            <div class="ct-form-header">
+              <h3 class="ct-form-title">SEND A MESSAGE</h3>
+              <p class="ct-form-sub">Tell me about your project</p>
             </div>
-            <div class="ct-social-arrow">↗</div>
-            <div class="ct-social-info">
-              <span class="ct-social-name">LinkedIn</span>
-              <span class="ct-social-handle">/in/mahmoud-mohamed</span>
-            </div>
+
+            <form class="ct-form" id="contactForm" name="submit-to-google-sheet" novalidate>
+              <div class="ct-form-group">
+                <label for="ctName" class="ct-form-label">NAME</label>
+                <input type="text" id="ctName" name="name" class="ct-input" placeholder="Your name" required
+                  autocomplete="name" />
+              </div>
+
+              <div class="ct-form-group">
+                <label for="ctEmail" class="ct-form-label">EMAIL</label>
+                <input type="email" id="ctEmail" name="email" class="ct-input" placeholder="you@example.com" required
+                  autocomplete="email" />
+              </div>
+
+              <div class="ct-form-group">
+                <label for="ctMessage" class="ct-form-label">MESSAGE</label>
+                <textarea id="ctMessage" name="message" class="ct-textarea" rows="4"
+                  placeholder="What would you like to talk about?" required></textarea>
+              </div>
+
+              <button type="submit" class="ct-submit-btn" id="ctSubmitBtn">
+                <span>Send message</span>
+              </button>
+
+              <div class="ct-form-status" id="msg" aria-live="polite"></div>
+            </form>
             <div class="ct-card-glow"></div>
-          </a>
-
-          <a href="https://wa.me/+201146935975" target="_blank" rel="noopener" class="ct-card ct-social-card">
-            <div class="ct-social-icon-wrap ct-icon-whatsapp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <div class="ct-social-arrow">↗</div>
-            <div class="ct-social-info">
-              <span class="ct-social-name">WhatsApp</span>
-              <span class="ct-social-handle">Direct message</span>
-            </div>
-            <div class="ct-card-glow"></div>
-          </a>
-
+          </div>
         </div>
-      </div>
 
-
-      <a href="assets/Mahmoud Mohamed Shamekh.pdf" target="_blank" rel="noopener noreferrer" download
-        class="ct-card ct-resume-card reveal">
-        <div class="ct-resume-icon-wrap">
-          <i class="fa-solid fa-file-arrow-down"></i>
-        </div>
-        <div class="ct-resume-info">
-          <span class="ct-resume-title">Resume</span>
-          <span class="ct-resume-sub">View credentials & experience (PDF)</span>
-        </div>
-        <div class="ct-resume-arrow">↗</div>
-        <div class="ct-card-glow"></div>
-      </a>
-
-
-      <div class="ct-collab-card ct-card reveal">
-        <div class="ct-collab-header">
-          <h3 class="ct-collab-title">Open to Collaborate On</h3>
-        </div>
-        <div class="ct-chips">
-          <span class="ct-chip">PLC Programming</span>
-          <span class="ct-chip">Industrial Automation</span>
-          <span class="ct-chip">Electrical Panels</span>
-          <span class="ct-chip">Control Systems</span>
-          <span class="ct-chip">SCADA</span>
-          <span class="ct-chip">HMI Development</span>
-          <span class="ct-chip">Robotics</span>
-          <span class="ct-chip">Embedded Systems</span>
-          <span class="ct-chip">Freelance Projects</span>
-          <span class="ct-chip">Engineering Consultation</span>
-        </div>
-        <div class="ct-card-glow"></div>
       </div>
 
     </div>
-
 
     <div class="ct-tooltip" id="ctTooltip">Email copied!</div>
   </section>
@@ -894,13 +915,10 @@
         <div class="footer-col footer-col--nav">
           <p class="footer-col-label">NAVIGATION</p>
           <ul class="footer-nav-list">
-            <li><a href="index.html"><span class="footer-nav-dash">——</span> Home</a></li>
-            <li><a href="index.html#about"><span class="footer-nav-dash">——</span> About</a></li>
+            <li><a href="#home"><span class="footer-nav-dash">——</span> Home</a></li>
+            <li><a href="#about"><span class="footer-nav-dash">——</span> About</a></li>
             <li><a href="#projects"><span class="footer-nav-dash">——</span> Work</a></li>
-            <li><a href="index.html#contact"><span class="footer-nav-dash">——</span> Contact</a></li>
-            <li><a href="index.html#skills"><span class="footer-nav-dash">——</span> Skills</a></li>
-            <li><a href="assets/Mahmoud Mohamed Shamekh.pdf" target="_blank" rel="noopener noreferrer" download><span
-                  class="footer-nav-dash">——</span> Resume</a></li>
+            <li><a href="#contact"><span class="footer-nav-dash">——</span> Contact</a></li>
           </ul>
         </div>
 
