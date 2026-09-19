@@ -442,8 +442,12 @@ sections.forEach(sec => sectionObserver.observe(sec));
     formData.set('date', new Date().toLocaleString());
     formData.set('Date', new Date().toLocaleString());
 
-    fetch(scriptURL, { method: 'POST', body: formData })
-      .then(response => {
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    })
+      .then(() => {
         if (msg) {
           msg.textContent = 'Message sent successfully!';
           msg.className = 'ct-form-status success';
