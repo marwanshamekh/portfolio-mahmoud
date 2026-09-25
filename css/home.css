@@ -1641,10 +1641,10 @@
   cursor: none !important;
 }
 
-.ct-submit-btn:hover {
+/* .ct-submit-btn:hover {
   background: #ffd633;
   box-shadow: 0 10px 28px rgba(245, 197, 24, 0.35);
-}
+} */
 
 
 .ct-submit-btn:disabled {
