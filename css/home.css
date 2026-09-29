@@ -1270,12 +1270,6 @@
   color: var(--accent);
 }
 
-.ct-email-note {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  color: var(--text-dim);
-  letter-spacing: 0.01em;
-}
 
 .ct-copy-btn {
   display: inline-flex;
