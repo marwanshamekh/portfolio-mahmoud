@@ -78,9 +78,8 @@
           <span class="pj-tag">VDI 2206</span>
         </div>
         <div class="pj-actions">
-          <a href="https://github.com/Shamekh21/Ball-and-Beam-Control-System" target="_blank"
-            rel="noopener noreferrer" class="btn-primary">VIEW ON GITHUB <i
-              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/Shamekh21/Ball-and-Beam-Control-System" target="_blank" rel="noopener noreferrer"
+            class="btn-primary">VIEW ON GITHUB <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           <a href="../index.html#contact" class="btn-ghost">GET IN TOUCH</a>
         </div>
       </div>
@@ -88,7 +87,8 @@
 
     <section class="pj-cover">
       <div class="container">
-        <img src="../assets/images/project(1).webp" alt="Ball and Beam Control System project overview" decoding="async" />
+        <img src="../assets/images/project(1).webp" alt="Ball and Beam Control System project overview"
+          decoding="async" />
       </div>
     </section>
 
@@ -98,8 +98,10 @@
         <h2 class="pj-h2">A system that wants to fall over</h2>
         <p class="pj-text">
           The ball and beam behaves like a double integrator, so it is unstable when left alone: the ball keeps drifting
-          away from where we want it. The plant is modelled as P(s) = 5.532 / s&sup2;, which means only feedback can hold
-          the ball in place. The goal was to take the whole project from idea to a working, tested machine, following the
+          away from where we want it. The plant is modelled as P(s) = 5.532 / s&sup2;, which means only feedback can
+          hold
+          the ball in place. The goal was to take the whole project from idea to a working, tested machine, following
+          the
           VDI 2206 methodology for mechatronic design.
         </p>
         <ol class="pj-flow">
@@ -118,7 +120,10 @@
         <div class="pj-label">The prototype</div>
         <h2 class="pj-h2">Built and tested on real hardware</h2>
         <div class="pj-split">
-          <figure class="pj-fig dark"><img src="../assets/images/bb-prototype.webp" alt="Final Ball and Beam prototype" loading="lazy" decoding="async" /><figcaption>The final prototype.</figcaption></figure>
+          <figure class="pj-fig dark"><img src="../assets/images/bb-prototype.webp" alt="Final Ball and Beam prototype"
+              loading="lazy" decoding="async" />
+            <figcaption>The final prototype.</figcaption>
+          </figure>
           <div>
             <div class="pj-card">
               <h3>Hardware</h3>
@@ -132,12 +137,12 @@
             <div class="pj-card" style="margin-top:1.25rem">
               <h3>Control loop</h3>
               <div class="pj-code">Reference position
-   -> PID controller (Arduino Uno)
-   -> MG995 servo
-   -> beam angle
-   -> ball position
-   -> HC-SR04 sensor
-   -> feedback to the controller</div>
+                -> PID controller (Arduino Uno)
+                -> MG995 servo
+                -> beam angle
+                -> ball position
+                -> HC-SR04 sensor
+                -> feedback to the controller</div>
             </div>
           </div>
         </div>
@@ -149,14 +154,24 @@
         <div class="pj-label">Mechanical design</div>
         <h2 class="pj-h2">CAD and finite element analysis</h2>
         <p class="pj-text">
-          The full assembly was modelled and checked before anything was built. The main parts are the beam assembly, the
+          The full assembly was modelled and checked before anything was built. The main parts are the beam assembly,
+          the
           linkage mechanism, the servo mount, the sensor holder and the structural base. FEA was used to look at
           displacement and stress on the connecting link and on the beam.
         </p>
-        <figure class="pj-fig dark"><img src="../assets/images/bb-cad.webp" alt="CAD model of the ball and beam assembly" loading="lazy" decoding="async" /><figcaption>CAD assembly of the whole system.</figcaption></figure>
+        <figure class="pj-fig dark"><img src="../assets/images/bb-cad.webp"
+            alt="CAD model of the ball and beam assembly" loading="lazy" decoding="async" />
+          <figcaption>CAD assembly of the whole system.</figcaption>
+        </figure>
         <div class="pj-figs" style="margin-top:1.25rem">
-          <figure class="pj-fig "><img src="../assets/images/bb-fea-link.webp" alt="Stress distribution on the connecting link" loading="lazy" decoding="async" /><figcaption>Stress distribution, connecting link.</figcaption></figure>
-          <figure class="pj-fig "><img src="../assets/images/bb-fea-beam.webp" alt="Stress distribution on the beam" loading="lazy" decoding="async" /><figcaption>Stress distribution, beam.</figcaption></figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-fea-link.webp"
+              alt="Stress distribution on the connecting link" loading="lazy" decoding="async" />
+            <figcaption>Stress distribution, connecting link.</figcaption>
+          </figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-fea-beam.webp" alt="Stress distribution on the beam"
+              loading="lazy" decoding="async" />
+            <figcaption>Stress distribution, beam.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -169,7 +184,10 @@
           An Arduino Uno reads the ultrasonic sensor and drives the MG995 servo. A voltage regulation stage and an
           external supply keep the servo from disturbing the logic side.
         </p>
-        <figure class="pj-fig "><img src="../assets/images/bb-circuit.webp" alt="Electronic circuit diagram" loading="lazy" decoding="async" /><figcaption>Circuit diagram.</figcaption></figure>
+        <figure class="pj-fig "><img src="../assets/images/bb-circuit.webp" alt="Electronic circuit diagram"
+            loading="lazy" decoding="async" />
+          <figcaption>Circuit diagram.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -183,15 +201,24 @@
           error.
         </p>
         <div class="pj-figs">
-          <figure class="pj-fig "><img src="../assets/images/bb-open-loop.webp" alt="Open-loop response" loading="lazy" decoding="async" /><figcaption>Open loop: the ball keeps drifting away.</figcaption></figure>
-          <figure class="pj-fig "><img src="../assets/images/bb-root-locus.webp" alt="Root locus" loading="lazy" decoding="async" /><figcaption>Root locus analysis.</figcaption></figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-open-loop.webp" alt="Open-loop response" loading="lazy"
+              decoding="async" />
+            <figcaption>Open loop: the ball keeps drifting away.</figcaption>
+          </figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-root-locus.webp" alt="Root locus" loading="lazy"
+              decoding="async" />
+            <figcaption>Root locus analysis.</figcaption>
+          </figure>
         </div>
         <div class="pj-stat">
           <div><b>40</b><span>Proportional gain Kp</span></div>
           <div><b>5</b><span>Integral gain Ki</span></div>
           <div><b>12</b><span>Derivative gain Kd</span></div>
         </div>
-        <figure class="pj-fig "><img src="../assets/images/bb-closed-loop.webp" alt="Closed-loop response" loading="lazy" decoding="async" /><figcaption>Closed loop: the PID controller tracks the reference accurately.</figcaption></figure>
+        <figure class="pj-fig "><img src="../assets/images/bb-closed-loop.webp" alt="Closed-loop response"
+            loading="lazy" decoding="async" />
+          <figcaption>Closed loop: the PID controller tracks the reference accurately.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -200,9 +227,18 @@
         <div class="pj-label">Tuning</div>
         <h2 class="pj-h2">What each gain does</h2>
         <div class="pj-figs three">
-          <figure class="pj-fig "><img src="../assets/images/bb-kp.webp" alt="Effect of Kp" loading="lazy" decoding="async" /><figcaption>Kp: faster response, but more overshoot.</figcaption></figure>
-          <figure class="pj-fig "><img src="../assets/images/bb-ki.webp" alt="Effect of Ki" loading="lazy" decoding="async" /><figcaption>Ki: removes steady-state error.</figcaption></figure>
-          <figure class="pj-fig "><img src="../assets/images/bb-kd.webp" alt="Effect of Kd" loading="lazy" decoding="async" /><figcaption>Kd: more damping, fewer oscillations.</figcaption></figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-kp.webp" alt="Effect of Kp" loading="lazy"
+              decoding="async" />
+            <figcaption>Kp: faster response, but more overshoot.</figcaption>
+          </figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-ki.webp" alt="Effect of Ki" loading="lazy"
+              decoding="async" />
+            <figcaption>Ki: removes steady-state error.</figcaption>
+          </figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-kd.webp" alt="Effect of Kd" loading="lazy"
+              decoding="async" />
+            <figcaption>Kd: more damping, fewer oscillations.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -212,13 +248,20 @@
         <div class="pj-label">Simulation and live control</div>
         <h2 class="pj-h2">Simulink, then the real machine</h2>
         <p class="pj-text">
-          The controller was first tested in MATLAB and Simulink, then implemented on the Arduino and connected to MATLAB
+          The controller was first tested in MATLAB and Simulink, then implemented on the Arduino and connected to
+          MATLAB
           over serial communication. That gave real-time data acquisition, live plots of the response, closed-loop
           monitoring and performance analysis.
         </p>
         <div class="pj-figs">
-          <figure class="pj-fig "><img src="../assets/images/bb-simulink.webp" alt="Closed-loop Simulink model" loading="lazy" decoding="async" /><figcaption>Closed-loop Simulink model.</figcaption></figure>
-          <figure class="pj-fig "><img src="../assets/images/bb-live.webp" alt="Measured distance versus time" loading="lazy" decoding="async" /><figcaption>Measured ball distance versus time on the prototype.</figcaption></figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-simulink.webp" alt="Closed-loop Simulink model"
+              loading="lazy" decoding="async" />
+            <figcaption>Closed-loop Simulink model.</figcaption>
+          </figure>
+          <figure class="pj-fig "><img src="../assets/images/bb-live.webp" alt="Measured distance versus time"
+              loading="lazy" decoding="async" />
+            <figcaption>Measured ball distance versus time on the prototype.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -236,27 +279,50 @@
           <div class="pj-card">
             <h3>Identified model 1</h3>
             <div class="pj-code">P(s) = (1.625s + 2.959)
-       / (s^2 + 15.09s + 12850)</div>
+              / (s^2 + 15.09s + 12850)</div>
           </div>
           <div class="pj-card">
             <h3>Identified model 2</h3>
             <div class="pj-code">P(s) = (25.05s + 39.11)
-       / (s^2 + 87.88s + 1.494e-10)</div>
+              / (s^2 + 87.88s + 1.494e-10)</div>
           </div>
         </div>
         <div class="pj-table-wrap">
           <table class="pj-table">
             <thead>
-              <tr><th>Model</th><th>Overshoot (%)</th><th>Settling time (s)</th><th>Steady-state error</th></tr>
+              <tr>
+                <th>Model</th>
+                <th>Overshoot (%)</th>
+                <th>Settling time (s)</th>
+                <th>Steady-state error</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Theoretical model</td><td>5.43</td><td>0.364</td><td>0</td></tr>
-              <tr><td>Practical model 1</td><td>0.00</td><td>1005.137</td><td>0</td></tr>
-              <tr><td>Practical model 2</td><td>0.77</td><td>0.000</td><td>0</td></tr>
+              <tr>
+                <td>Theoretical model</td>
+                <td>5.43</td>
+                <td>0.364</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Practical model 1</td>
+                <td>0.00</td>
+                <td>1005.137</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Practical model 2</td>
+                <td>0.77</td>
+                <td>0.000</td>
+                <td>0</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <figure class="pj-fig narrow"><img src="../assets/images/bb-compare.webp" alt="Comparison of theoretical and practical models" loading="lazy" decoding="async" /><figcaption>Theoretical and experimentally identified models compared.</figcaption></figure>
+        <figure class="pj-fig narrow"><img src="../assets/images/bb-compare.webp"
+            alt="Comparison of theoretical and practical models" loading="lazy" decoding="async" />
+          <figcaption>Theoretical and experimentally identified models compared.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -275,7 +341,7 @@
   <footer class="pj-footer">
     <div class="container">
       <a href="../index.html#projects" class="btn-ghost">BACK TO ALL PROJECTS</a>
-      <p>&copy; 2026 Mahmoud Shamekh &mdash; All rights reserved</p>
+      <p>&copy; 2026 Marwan Shamekh &mdash; All rights reserved</p>
     </div>
   </footer>
 
