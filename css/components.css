@@ -270,7 +270,7 @@ body.menu-open .hamburger {
 
 .nav-panel-links a {
   display: block;
-  font-size: clamp(34px, 8vw, 64px);
+  font-size: clamp(30px, min(8vw, 8.5vh), 64px);
   font-weight: 300;
   color: var(--text);
   line-height: 1.06;
@@ -311,7 +311,12 @@ body.menu-open .hamburger {
   transition-delay: .40s;
 }
 
-.nav-panel-links a:hover {
+.nav-overlay.open .nav-panel-links li:nth-child(7) a {
+  transition-delay: .46s;
+}
+
+.nav-panel-links a:hover,
+.nav-panel-links a.active {
   color: var(--accent);
 }
 
@@ -332,17 +337,8 @@ body.menu-open .hamburger {
 }
 
 /* Scroll reveal */
+/* Scroll reveal animation removed: content is visible immediately */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal.visible,
-.reveal.is-visible {
   opacity: 1;
   transform: none;
 }

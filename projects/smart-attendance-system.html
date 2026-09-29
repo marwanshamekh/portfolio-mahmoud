@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Smart Attendance System: an AI attendance system with real-time face detection and recognition, built in Python. 2nd place at Ramadan Camp 2026 (AI and Computer Vision).">
+  <meta name="theme-color" content="#0B0F19">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mahmoud Shamekh">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Smart Attendance System | Mahmoud Shamekh">
+  <meta property="og:description"
+    content="Real-time face recognition attendance, from a Jupyter Notebook to a PyQt5 desktop app. 2nd place at Ramadan Camp 2026.">
+  <meta property="og:image" content="../assets/images/project(3).webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Smart Attendance System | Mahmoud Shamekh</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="pj-topbar">
+    <div class="pj-topbar-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Back to home">
+        <svg class="logo-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="50" fill="currentColor" />
+          <text x="51" y="63" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="40"
+            font-weight="900" fill="var(--bg, #fff)">MS</text>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-first">MAHMOUD</span>
+          <span class="logo-last">SHAMEKH</span>
+        </div>
+      </a>
+      <a href="../index.html#projects" class="pj-back"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pj-hero">
+      <div class="container">
+        <div class="pj-meta"><span>AI &amp; Computer Vision</span><span class="dot">&bull;</span><span>2026</span></div>
+        <h1 class="pj-title">Smart Attendance <span>System</span></h1>
+        <p class="pj-lead">
+          An AI attendance system that detects and recognizes faces in real time and manages attendance automatically.
+          It won 2nd place in Ramadan Camp 2026 (AI &amp; Computer Vision).
+        </p>
+        <div class="pj-tags">
+          <span class="pj-tag">Python</span>
+          <span class="pj-tag">PyQt5</span>
+          <span class="pj-tag">OpenCV</span>
+          <span class="pj-tag">YOLOv8</span>
+          <span class="pj-tag">DeepFace</span>
+          <span class="pj-tag">OpenFace</span>
+        </div>
+        <div class="pj-actions">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7460744226855845888/" target="_blank"
+            rel="noopener noreferrer" class="btn-primary">WATCH THE DEMO ON LINKEDIN <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="../index.html#contact" class="btn-ghost">GET IN TOUCH</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-cover">
+      <div class="container">
+        <img src="../assets/images/project(3).webp" alt="Smart Attendance System project overview" decoding="async" />
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Recognition</div>
+        <h2 class="pj-h2">2nd place, Ramadan Camp 2026</h2>
+        <p class="pj-text">
+          The project placed second in the AI &amp; Computer Vision track of Ramadan Camp 2026. The award ceremony took
+          place during the &ldquo;Research X&rdquo; event, hosted by the IEEE BUB RAS Chapter (Robotics &amp; Automation
+          Society) of the IEEE BUB Student Branch.
+        </p>
+        <div class="pj-stat">
+          <div><b>2nd</b><span>Place, AI &amp; Computer Vision</span></div>
+          <div><b>2</b><span>Versions built: Notebook and Desktop App</span></div>
+          <div><b>v2.0</b><span>Desktop application release</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Two versions</div>
+        <h2 class="pj-h2">From notebook to desktop app</h2>
+        <div class="pj-grid">
+          <div class="pj-card">
+            <h3>Jupyter Notebook version</h3>
+            <p>The first version of the system, shown running live inside a Jupyter Notebook.</p>
+          </div>
+          <div class="pj-card">
+            <h3>Desktop application v2.0</h3>
+            <p>The upgraded version of the system, built as a desktop application with PyQt5.</p>
+          </div>
+        </div>
+        <p class="pj-note">
+          The demo video shows both versions running end to end in real time, including a live face recognition test on
+          the developer himself.
+        </p>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Stack</div>
+        <h2 class="pj-h2">Tools used</h2>
+        <div class="pj-grid">
+          <div class="pj-card">
+            <h3>Computer vision</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">OpenCV</span><span class="pj-chip">YOLOv8 (Ultralytics)</span><span
+                class="pj-chip">DeepFace</span><span class="pj-chip">OpenFace</span>
+            </div>
+          </div>
+          <div class="pj-card">
+            <h3>Application and data</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">Python</span><span class="pj-chip">PyQt5</span><span
+                class="pj-chip">scikit-learn</span><span class="pj-chip">Pandas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Credits</div>
+        <h2 class="pj-h2">Thanks</h2>
+        <p class="pj-text">
+          Thanks to the camp organizer, Raghad Gamal, for her support and dedication throughout the camp, and to the
+          whole Robotics &amp; Arduino Committee team for making the experience possible.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pj-footer">
+    <div class="container">
+      <a href="../index.html#projects" class="btn-ghost">BACK TO ALL PROJECTS</a>
+      <p>&copy; 2026 Mahmoud Shamekh &mdash; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+
+</html>

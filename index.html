@@ -7,9 +7,29 @@
   <meta name="description"
     content="Professional Mechatronics Engineer Portfolio showcasing projects, experience, certifications and technical skills.">
   <meta name="theme-color" content="#0B0F19">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mahmoud Shamekh">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mahmoud Shamekh | Mechatronics Engineer">
+  <meta property="og:description"
+    content="Mechatronics, Robotics and Automation engineering student. PLC, control systems, computer vision and AI projects.">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mahmoud Shamekh | Mechatronics Engineer">
+  <meta name="twitter:description"
+    content="Mechatronics, Robotics and Automation engineering student. PLC, control systems, computer vision and AI projects.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
   <title>Mahmoud Shamekh | Mechatronics Engineer</title>
 
-  <link rel="icon" type="image/webp" href="assets/images/photo(1).webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
   <link rel="stylesheet" href="css/base.css" />
@@ -24,6 +44,9 @@
     href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Mahmoud Shamekh","jobTitle":"Mechatronics Engineer","alumniOf":{"@type":"CollegeOrUniversity","name":"Benha University"},"sameAs":["https://github.com/Shamekh21","https://www.linkedin.com/in/mahmoud-mohamed-7784ab2a5/"]}
+  </script>
 </head>
 
 <body>
@@ -79,10 +102,10 @@
     <div class="nav-panel">
       <p class="nav-section-label">Navigation</p>
       <ul class="nav-panel-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
       <p class="nav-socials-label">Socials</p>
       <div class="nav-socials">
@@ -94,19 +117,32 @@
 
 
   <section id="hero" class="intro-section">
-    <div class="intro-container">
-      <div class="intro-top-label">
-        CRAFTING BEAUTIFUL DIGITAL EXPERIENCES
-      </div>
 
+    <div class="intro-container">
       <div class="intro-title-wrapper">
         <h1 class="intro-title">
-          <span class="intro-title-line">MAHMOUD</span>
-          <span class="intro-title-line">SHAMEKH</span>
+          <span class="intro-title-line intro-title-fill">MAHMOUD</span>
+          <span class="intro-title-line intro-title-outline">SHAMEKH</span>
         </h1>
       </div>
     </div>
 
+    <div class="hero-portrait">
+      <img src="assets/images/portrait-cutout.webp" alt="Mahmoud Shamekh - Mechatronics Engineer" width="840"
+        height="870" decoding="async" fetchpriority="high" />
+    </div>
+
+    <div class="hero-bio">
+      <p class="hero-bio-lead">Mechatronics &amp; Automation Engineer.</p>
+      <p class="hero-bio-text">
+        Designing intelligent machines where mechanical design, control systems and AI come together.
+      </p>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">VIEW PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn-ghost">GET IN TOUCH</a>
+    </div>
 
     <div class="intro-badge" aria-label="Available for work">
       <svg viewBox="0 0 200 200" width="160" height="160" class="intro-badge-svg">
@@ -122,66 +158,31 @@
     </div>
   </section>
 
-
   <section id="about" class="about-section">
     <div class="container">
 
-
-      <h2 class="about-main-title xp-header-title reveal" id="aboutTitle">ABOUT<span
-          style="color: var(--accent);">.</span></h2>
-      <div class="about-divider" id="aboutDivider"></div>
-
-
-      <div class="about-card reveal" id="aboutCard">
-        <div class="about-card-inner">
-
-
-          <div class="about-col-left">
-            <div class="about-portrait-frame">
-              <img src="assets/images/photo(1).webp" alt="Mahmoud Shamekh - Mechatronics Engineer"
-                class="about-portrait-img" loading="lazy" decoding="async" />
-            </div>
-          </div>
-
-
-          <div class="about-col-right">
-
-            <h3 class="about-headline" id="aboutHeadline">
-              MECHATRONICS ENGINEERING STUDENT PASSIONATE ABOUT AI, ROBOTICS &amp; INDUSTRIAL AUTOMATION.
-            </h3>
-
-            <div class="about-bio-text" id="aboutBioText">
-              <p>
-                I am a Mechatronics, Robotics, and Automation Engineering student at Benha University with a strong
-                interest in Artificial Intelligence, Computer Vision, Industrial Automation, and Product Design.
-              </p>
-              <p>
-                I have hands-on experience in PLC programming, VFD configuration, Classic Control systems, and LV
-                Electrical Panels through industrial training and technical projects. I am also exploring AI and
-                Computer Vision to develop intelligent solutions for real-world engineering applications.
-
-              </p>
-              <p>
-                As a member of Shoubra Racing Team, I contribute to vehicle body design and CAD modeling using Fusion
-                360. I am also an active member of the IEEE BUB Robotics &amp; Arduino Committee, where I continue to
-                develop my technical, problem-solving, and teamwork skills.
-              </p>
-              <p>
-                My goal is to combine engineering, automation, intelligent systems, and product design to build
-                practical solutions that create real-world impact.
-              </p>
-            </div>
-
-            <div class="about-cta-row" id="aboutCtaRow">
-              <a href="#contact" class="btn-primary">GET IN TOUCH <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="#projects" class="btn-ghost">VIEW PROJECTS</a>
-            </div>
-
-          </div>
-
+      <div class="section-header reveal">
+        <div>
+          <h2 class="section-title-xl">ABOUT<span style="color: var(--accent);">.</span></h2>
         </div>
       </div>
 
+      <div class="about-body reveal">
+
+        <div class="about-text">
+          <p>
+            I'm Mahmoud Shamekh, a Mechatronics, Robotics and Automation student at Benha University with a passion
+            for building machines that sense, decide, and move. I started with PLCs and motor drives in industrial
+            training, then moved into control theory, computer vision, and product design.
+          </p>
+          <p>
+            I like projects where hardware and software have to work as one system, from a PID-balanced ball on a
+            beam to an AI-driven sorting cell with a digital twin. Always learning, and always eager to grow through
+            real projects and teamwork.
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -346,8 +347,7 @@
 
         <article class="project-row reveal" data-image="assets/images/project(1).webp"
           data-alt="Ball and Beam Control System">
-          <a href="https://github.com/Shamekh21/Ball-and-Beam-Control-System" target="_blank" rel="noopener noreferrer"
-            class="project-row-link">
+          <a href="projects/ball-and-beam-control.html" class="project-row-link">
             <div class="project-row-left">
               <span class="project-row-num">01</span>
               <div class="project-row-info">
@@ -377,8 +377,7 @@
         </article>
 
         <article class="project-row reveal" data-image="assets/images/project(2).webp" data-alt="Line Follower Robot">
-          <a href="https://github.com/Shamekh21/Line-Follower-Robot-PID-Control" target="_blank"
-            rel="noopener noreferrer" class="project-row-link">
+          <a href="projects/line-follower-robot.html" class="project-row-link">
             <div class="project-row-left">
               <span class="project-row-num">02</span>
               <div class="project-row-info">
@@ -407,8 +406,7 @@
 
         <article class="project-row reveal" data-image="assets/images/project(4).webp"
           data-alt="AI Sorting &amp; Digital Twin">
-          <a href="https://github.com/Shamekh21/Fully-Automated-Industrial-Inspection-Sorting-System-with-Digital-Twin"
-            target="_blank" rel="noopener noreferrer" class="project-row-link">
+          <a href="projects/ai-sorting-digital-twin.html" class="project-row-link">
             <div class="project-row-left">
               <span class="project-row-num">03</span>
               <div class="project-row-info">
@@ -439,8 +437,7 @@
 
         <article class="project-row reveal" data-image="assets/images/project(3).webp"
           data-alt="Smart Attendance System">
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7460744226855845888/" target="_blank"
-            rel="noopener noreferrer" class="project-row-link">
+          <a href="projects/smart-attendance-system.html" class="project-row-link">
             <div class="project-row-left">
               <span class="project-row-num">04</span>
               <div class="project-row-info">
@@ -478,95 +475,63 @@
     <div class="container">
       <div class="section-header reveal">
         <div>
-          <h2 class="section-title-lg">SKILLS &amp; TOOLKIT<span style="color: var(--accent);">.</span></h2>
+          <h2 class="section-title-xl">SKILLS &amp; TOOLKIT<span style="color: var(--accent);">.</span></h2>
         </div>
       </div>
 
-      <div class="marquee-wrapper reveal">
-
-        <div class="marquee marquee-left">
-          <div class="marquee-content">
-            <span class="skill-item">FUSION 360</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">SOLIDWORKS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">MATLAB</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">ARDUINO</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">EMBEDDED C</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PYTHON</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">COMPUTER VISION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">MACHINE LEARNING</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PYTORCH</span>
-            <span class="diamond">✦</span>
-
-            <!-- Repeat for seamless scrolling -->
-            <span class="skill-item">FUSION 360</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">SOLIDWORKS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">MATLAB</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">ARDUINO</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">EMBEDDED C</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PYTHON</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">COMPUTER VISION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">MACHINE LEARNING</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PYTORCH</span>
-            <span class="diamond">✦</span>
+      <div class="skills-grid reveal">
+        <div class="skills-card">
+          <div class="skills-card-head">
+            <span class="skills-card-num">01</span>
+            <h3 class="skills-card-title">Control and automation</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skills-chip">PLC programming</span>
+            <span class="skills-chip">Classic control</span>
+            <span class="skills-chip">VFD and motor drives</span>
+            <span class="skills-chip">PID control</span>
+            <span class="skills-chip">Control systems</span>
+            <span class="skills-chip">Industrial automation</span>
           </div>
         </div>
 
-        <div class="marquee marquee-right">
-          <div class="marquee-content">
-            <span class="skill-item">CONTROL SYSTEMS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">INDUSTRIAL AUTOMATION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PLC PROGRAMMING</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PID CONTROL</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">FEA ANALYSIS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">ROBOTICS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">AERODYNAMICS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">SENSOR INTEGRATION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">CLASSIC CONTROL</span>
-            <span class="diamond">✦</span>
+        <div class="skills-card">
+          <div class="skills-card-head">
+            <span class="skills-card-num">02</span>
+            <h3 class="skills-card-title">Design and CAD</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skills-chip">Fusion 360</span>
+            <span class="skills-chip">SolidWorks</span>
+            <span class="skills-chip">FEA analysis</span>
+            <span class="skills-chip">Aerodynamics</span>
+          </div>
+        </div>
 
-            <!-- Repeat for seamless scrolling -->
-            <span class="skill-item">CONTROL SYSTEMS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">INDUSTRIAL AUTOMATION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PLC PROGRAMMING</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">PID CONTROL</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">FEA ANALYSIS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">ROBOTICS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">AERODYNAMICS</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">SENSOR INTEGRATION</span>
-            <span class="diamond">✦</span>
-            <span class="skill-item">CLASSIC CONTROL</span>
-            <span class="diamond">✦</span>
+        <div class="skills-card">
+          <div class="skills-card-head">
+            <span class="skills-card-num">03</span>
+            <h3 class="skills-card-title">AI and software</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skills-chip">Python</span>
+            <span class="skills-chip">PyTorch</span>
+            <span class="skills-chip">Computer vision</span>
+            <span class="skills-chip">Machine learning</span>
+            <span class="skills-chip">MATLAB</span>
+          </div>
+        </div>
+
+        <div class="skills-card">
+          <div class="skills-card-head">
+            <span class="skills-card-num">04</span>
+            <h3 class="skills-card-title">Embedded and robotics</h3>
+          </div>
+          <div class="skills-chips">
+            <span class="skills-chip">Arduino</span>
+            <span class="skills-chip">Embedded C</span>
+            <span class="skills-chip">Robotics</span>
+            <span class="skills-chip">Sensor integration</span>
           </div>
         </div>
       </div>
@@ -609,7 +574,7 @@
 
       <div class="section-header reveal">
         <div>
-          <h2 class="section-title-lg">CERTIFICATES<span style="color: var(--accent);">.</span></h2>
+          <h2 class="section-title-xl">CERTIFICATES<span style="color: var(--accent);">.</span></h2>
         </div>
       </div>
 
@@ -773,7 +738,7 @@
                 <i class="fa-regular fa-envelope"></i>
                 <span>PRIMARY EMAIL</span>
               </div>
-              <a href="mailto:mmhmdshamekh@gmail.com" class="ct-email-address">mmhmdshamekh@gmail.com</a>
+              <a href="#contact" class="ct-email-address js-mail" aria-label="Email"></a>
               <p class="ct-email-note">Usually replies within 24 hours</p>
             </div>
             <button type="button" class="ct-copy-btn" id="ctCopyBtn" aria-label="Copy email address" title="Copy email">
@@ -814,7 +779,7 @@
                 <div class="ct-card-glow"></div>
               </a>
 
-              <a href="https://wa.me/+201146935975" target="_blank" rel="noopener" class="ct-card ct-social-card">
+              <a href="#contact" target="_blank" rel="noopener noreferrer" class="ct-card ct-social-card js-wa">
                 <div class="ct-social-icon-wrap ct-icon-whatsapp">
                   <i class="fa-brands fa-whatsapp"></i>
                 </div>
@@ -854,22 +819,26 @@
               <p class="ct-form-sub">Tell me about your project</p>
             </div>
 
-            <form class="ct-form" id="contactForm" name="submit-to-google-sheet" novalidate>
+            <form class="ct-form" id="contactForm" name="submit-to-google-sheet" novalidate autocomplete="on">
+              <div class="ct-hp" aria-hidden="true">
+                <label for="ctWebsite">Leave this field empty</label>
+                <input type="text" id="ctWebsite" name="website" tabindex="-1" autocomplete="off" />
+              </div>
               <div class="ct-form-group">
                 <label for="ctName" class="ct-form-label">NAME</label>
-                <input type="text" id="ctName" name="name" class="ct-input" placeholder="Your name" required
-                  autocomplete="name" />
+                <input type="text" id="ctName" name="name" class="ct-input" placeholder="Your name" maxlength="80"
+                  required autocomplete="name" />
               </div>
 
               <div class="ct-form-group">
                 <label for="ctEmail" class="ct-form-label">EMAIL</label>
-                <input type="email" id="ctEmail" name="email" class="ct-input" placeholder="you@example.com" required
-                  autocomplete="email" />
+                <input type="email" id="ctEmail" name="email" class="ct-input" placeholder="you@example.com"
+                  maxlength="120" required autocomplete="email" />
               </div>
 
               <div class="ct-form-group">
                 <label for="ctMessage" class="ct-form-label">MESSAGE</label>
-                <textarea id="ctMessage" name="message" class="ct-textarea" rows="4"
+                <textarea id="ctMessage" name="message" class="ct-textarea" rows="4" maxlength="2000"
                   placeholder="What would you like to talk about?" required></textarea>
               </div>
 
@@ -906,7 +875,7 @@
             <div class="footer-avatar">
               <img src="assets/images/photo(1).webp" alt="Mahmoud Shamekh" loading="lazy" decoding="async" />
             </div>
-            <a href="mailto:mmhmdshamekh@gmail.com" class="footer-email-link">mmhmdshamekh@gmail.com</a>
+            <a href="#contact" class="footer-email-link js-mail" aria-label="Email"></a>
           </div>
           <p class="footer-tagline">Open to freelance projects, collaborations, and full-time opportunities.</p>
         </div>
@@ -915,8 +884,8 @@
         <div class="footer-col footer-col--nav">
           <p class="footer-col-label">NAVIGATION</p>
           <ul class="footer-nav-list">
-            <li><a href="#home"><span class="footer-nav-dash">——</span> Home</a></li>
             <li><a href="#about"><span class="footer-nav-dash">——</span> About</a></li>
+            <li><a href="#experience"><span class="footer-nav-dash">——</span> Experience</a></li>
             <li><a href="#projects"><span class="footer-nav-dash">——</span> Work</a></li>
             <li><a href="#contact"><span class="footer-nav-dash">——</span> Contact</a></li>
           </ul>
@@ -947,18 +916,14 @@
 
 
     <div class="footer-bottom">
-      <p>2026 — <a href="https://www.linkedin.com/in/marwan-shamekh-b1b2403a6/" target="_blank" rel="noopener"
-          class="footer-bottom-link">All rights reserved</a></p>
+      <p>&copy; 2026 Mahmoud Shamekh &mdash; All rights reserved</p>
     </div>
 
 
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-  <script src="js/shared.js"></script>
-  <script src="js/home.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 

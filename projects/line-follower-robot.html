@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Line Follower Robot: an autonomous robot with a five-sensor IR array and PID steering, built for the Mobile Robots course and a campus robotics competition.">
+  <meta name="theme-color" content="#0B0F19">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mahmoud Shamekh">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Line Follower Robot | Mahmoud Shamekh">
+  <meta property="og:description"
+    content="An autonomous line follower with PID steering, designed in SolidWorks and tuned for high-speed stability.">
+  <meta property="og:image" content="../assets/images/project(2).webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Line Follower Robot | Mahmoud Shamekh</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="pj-topbar">
+    <div class="pj-topbar-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Back to home">
+        <svg class="logo-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="50" fill="currentColor" />
+          <text x="51" y="63" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="40"
+            font-weight="900" fill="var(--bg, #fff)">MS</text>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-first">MAHMOUD</span>
+          <span class="logo-last">SHAMEKH</span>
+        </div>
+      </a>
+      <a href="../index.html#projects" class="pj-back"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pj-hero">
+      <div class="container">
+        <div class="pj-meta"><span>Mobile Robots</span><span class="dot">&bull;</span><span>2026</span></div>
+        <h1 class="pj-title">Line Follower <span>Robot</span></h1>
+        <p class="pj-lead">
+          An autonomous robot that follows a line at speed. Five infrared sensors measure where the line is, a PID
+          controller turns that error into steering, and the robot took part in a campus robotics competition.
+        </p>
+        <div class="pj-tags">
+          <span class="pj-tag">Arduino</span>
+          <span class="pj-tag">PID</span>
+          <span class="pj-tag">SolidWorks</span>
+          <span class="pj-tag">Embedded C/C++</span>
+          <span class="pj-tag">TCRT5000</span>
+        </div>
+        <div class="pj-actions">
+          <a href="https://github.com/Shamekh21/Line-Follower-Robot-PID-Control" target="_blank"
+            rel="noopener noreferrer" class="btn-primary">VIEW ON GITHUB <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="../index.html#contact" class="btn-ghost">GET IN TOUCH</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-cover">
+      <div class="container">
+        <img src="../assets/images/lf-cad.webp" alt="Line Follower Robot project overview" decoding="async" />
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">The goal</div>
+        <h2 class="pj-h2">Fast, but never lost</h2>
+        <p class="pj-text">
+          Built for the Mobile Robots course (MAM331) at the Faculty of Engineering, Benha University. The aim was
+          autonomous line tracking with PID steering correction that stays stable at high speed, and the robot finished
+          the competition course with fast completion times and reliable cornering.
+        </p>
+        <div class="pj-split">
+          <div>
+            <div class="pj-card">
+              <h3>How it steers</h3>
+              <p>The five-sensor array maps the line position from -2 (far left) to +2 (far right). That value is the
+                error. The PID controller uses it to speed one motor up and slow the other down.</p>
+              <div class="pj-code" style="margin-top:1rem">Sensors: [-2] [-1] [ 0] [+1] [+2]
+                -> line position (error)
+                -> PID controller
+                -> left / right motor speed
+                -> robot turns back to the line</div>
+            </div>
+            <div class="pj-card" style="margin-top:1.25rem">
+              <h3>Software features</h3>
+              <div class="pj-chips">
+                <span class="pj-chip">Real-time sensor processing</span><span class="pj-chip">Dynamic motor speed
+                  adjustment</span><span class="pj-chip">Automatic line recovery</span><span class="pj-chip">Independent
+                  motor calibration</span>
+              </div>
+            </div>
+          </div>
+          <figure class="pj-fig dark">
+            <video class="pj-video" src="../assets/video/line-follower-demo.mp4"
+              poster="../assets/images/lf-demo-poster.webp" autoplay muted loop playsinline preload="metadata"
+              aria-label="Line follower robot running on the track"></video>
+            <figcaption>The robot on the track.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Design</div>
+        <h2 class="pj-h2">Chassis and hardware</h2>
+        <p class="pj-text">
+          The chassis was designed in SolidWorks, then the parts were assembled and wired. It uses two rear drive motors
+          and a free-moving front caster for differential steering, with the sensor array at the front.
+        </p>
+        <div class="pj-figs" style="margin-top:2rem">
+          <figure class="pj-fig dark"><img src="../assets/images/lf-cad.webp" alt="SolidWorks model of the chassis"
+              loading="lazy" decoding="async" />
+            <figcaption>SolidWorks chassis design.</figcaption>
+          </figure>
+          <figure class="pj-fig dark"><img src="../assets/images/lf-hardware.webp" alt="Annotated hardware overview"
+              loading="lazy" decoding="async" />
+            <figcaption>Hardware overview.</figcaption>
+          </figure>
+        </div>
+        <div class="pj-grid">
+          <div class="pj-card">
+            <h3>Electronics</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">Arduino</span><span class="pj-chip">L298N motor driver</span><span
+                class="pj-chip">5x TCRT5000 IR sensors</span><span class="pj-chip">Li-ion battery pack</span>
+            </div>
+          </div>
+          <div class="pj-card">
+            <h3>Drive</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">2x JGA25-370 geared DC motors</span><span class="pj-chip">780 RPM at 12V</span><span
+                class="pj-chip">Free-moving front caster</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Result</div>
+        <h2 class="pj-h2">Tuned by testing</h2>
+        <p class="pj-text">
+          The PID gains were tuned experimentally on the real track for stability at high speed. The team built the
+          chassis, assembled the hardware, wrote the control code in Embedded C/C++ and competed on campus.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pj-footer">
+    <div class="container">
+      <a href="../index.html#projects" class="btn-ghost">BACK TO ALL PROJECTS</a>
+      <p>&copy; 2026 Mahmoud Shamekh &mdash; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+
+</html>

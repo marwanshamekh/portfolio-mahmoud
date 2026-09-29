@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AI Sorting and Digital Twin: a cyber-physical production system that inspects casting parts with a PyTorch CNN, plans UR5 motion with MATLAB optimization and mirrors it in CoppeliaSim.">
+  <meta name="theme-color" content="#0B0F19">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mahmoud Shamekh">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI Sorting and Digital Twin | Mahmoud Shamekh">
+  <meta property="og:description"
+    content="Fully automated inspection and sorting: PyTorch CNN defect detection, UR5 robotic sorting, MATLAB kinematics and a CoppeliaSim digital twin.">
+  <meta property="og:image" content="../assets/images/project(4).webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>AI Sorting and Digital Twin | Mahmoud Shamekh</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header class="pj-topbar">
+    <div class="pj-topbar-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Back to home">
+        <svg class="logo-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="50" fill="currentColor" />
+          <text x="51" y="63" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="40"
+            font-weight="900" fill="var(--bg, #fff)">MS</text>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-first">MAHMOUD</span>
+          <span class="logo-last">SHAMEKH</span>
+        </div>
+      </a>
+      <a href="../index.html#projects" class="pj-back"><i class="fa-solid fa-arrow-left"></i> Back to work</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="pj-hero">
+      <div class="container">
+        <div class="pj-meta"><span>Robotics &amp; AI</span><span class="dot">•</span><span>2026</span></div>
+        <h1 class="pj-title">AI Sorting &amp; <span>Digital Twin</span></h1>
+        <p class="pj-lead">
+          A cyber-physical production system that inspects industrial casting parts with a camera and a CNN, decides
+          where each part goes, and moves it with a UR5 robot, mirrored live in a CoppeliaSim digital twin.
+        </p>
+        <div class="pj-tags">
+          <span class="pj-tag">PyTorch</span>
+          <span class="pj-tag">MATLAB</span>
+          <span class="pj-tag">CoppeliaSim</span>
+          <span class="pj-tag">UR5</span>
+          <span class="pj-tag">Arduino</span>
+          <span class="pj-tag">OpenCV</span>
+        </div>
+        <div class="pj-actions">
+          <a href="https://github.com/Shamekh21/Fully-Automated-Industrial-Inspection-Sorting-System-with-Digital-Twin"
+            target="_blank" rel="noopener noreferrer" class="btn-primary">VIEW ON GITHUB <i
+              class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="../index.html#contact" class="btn-ghost">GET IN TOUCH</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-cover">
+      <div class="container">
+        <img src="../assets/images/project(4).webp" alt="AI Sorting and Digital Twin project overview" decoding="async" />
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">The problem</div>
+        <h2 class="pj-h2">Inspection without the human</h2>
+        <p class="pj-text">
+          Manual quality control is slow and depends on how attentive the inspector is. This project replaces it with a
+          fully automated loop: detect defective castings with AI, then sort them without anyone touching the line,
+          following Industry 4.0 ideas.
+        </p>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">How it works</div>
+        <h2 class="pj-h2">From camera to pick and place</h2>
+        <p class="pj-text">
+          Each part travels through the same pipeline. Software modules talk to each other over TCP/IP: CoppeliaSim,
+          the MATLAB controller and the Python AI core each have their own port, and an Arduino serial bridge closes the
+          loop with physical feedback.
+        </p>
+        <ol class="pj-flow">
+          <li><b>Camera</b><span>Captures each part on the conveyor.</span></li>
+          <li><b>Image processing</b><span>Grayscale, resize to 64x64, convert to a tensor.</span></li>
+          <li><b>CNN classifier</b><span>Labels the part as OK or Defective.</span></li>
+          <li><b>Expert system</b><span>Turns the AI decision into a robot action.</span></li>
+          <li><b>MATLAB controller</b><span>Optimization and inverse kinematics for the UR5.</span></li>
+          <li><b>Pick and place</b><span>Robot sorts the part, Arduino HMI shows the result.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Under the hood</div>
+        <h2 class="pj-h2">Model, rules and motion planning</h2>
+        <div class="pj-grid">
+          <div class="pj-card">
+            <h3>CNN architecture</h3>
+            <div class="pj-code">Input 64x64x1
+Conv2D(16) + ReLU + MaxPool
+Conv2D(32) + ReLU + MaxPool
+Flatten -> FC(128) -> FC(2)</div>
+            <p>Trained with the Adam optimizer, learning rate 0.001 and cross-entropy loss. Evaluated with a confusion
+              matrix, accuracy, precision, recall and F1 score.</p>
+          </div>
+          <div class="pj-card">
+            <h3>Expert system rules</h3>
+            <div class="pj-code">IF part = OK
+  -> packaging line, green bin
+IF part = Defective
+  -> scrap bin, red bin</div>
+            <p>Simple, readable rules sit between the AI and the robot, so the sorting logic can be changed without
+              retraining the model.</p>
+          </div>
+          <div class="pj-card">
+            <h3>Motion optimization</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">Analytical inverse kinematics</span>
+              <span class="pj-chip">Genetic algorithm</span>
+              <span class="pj-chip">Simulated annealing</span>
+              <span class="pj-chip">Particle swarm</span>
+              <span class="pj-chip">Pattern search</span>
+            </div>
+            <p style="margin-top:1rem">Compared on joint motion cost, energy use, position accuracy, smoothness and
+              computation time.</p>
+          </div>
+          <div class="pj-card">
+            <h3>Operating modes</h3>
+            <p><b style="color:var(--text)">Auto:</b> sensor-driven, continuous production with no operator.</p>
+            <p><b style="color:var(--text)">Manual:</b> editable coordinates for testing and tuning.</p>
+            <p><b style="color:var(--text)">Emergency stop:</b> one key safely shuts down every process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Stack</div>
+        <h2 class="pj-h2">Tools and hardware</h2>
+        <div class="pj-grid">
+          <div class="pj-card">
+            <h3>AI and vision</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">Python</span><span class="pj-chip">PyTorch</span><span
+                class="pj-chip">TorchVision</span><span class="pj-chip">OpenCV</span>
+            </div>
+          </div>
+          <div class="pj-card">
+            <h3>Robotics and control</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">MATLAB</span><span class="pj-chip">Robotics System Toolbox</span><span
+                class="pj-chip">Global Optimization Toolbox</span><span class="pj-chip">Instrument Control
+                Toolbox</span>
+            </div>
+          </div>
+          <div class="pj-card">
+            <h3>Digital twin</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">CoppeliaSim</span><span class="pj-chip">TCP/IP sync with MATLAB</span>
+            </div>
+          </div>
+          <div class="pj-card">
+            <h3>Hardware</h3>
+            <div class="pj-chips">
+              <span class="pj-chip">UR5 cobot</span><span class="pj-chip">Industrial camera</span><span
+                class="pj-chip">Proximity sensor</span><span class="pj-chip">Arduino UNO, LCD and LEDs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pj-section">
+      <div class="container">
+        <div class="pj-label">Context</div>
+        <h2 class="pj-h2">Where it came from</h2>
+        <p class="pj-text">
+          Built as a team project for MAE401 Artificial Intelligence at the Faculty of Engineering, Benha University,
+          under the supervision of Dr. Amro Shafik.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pj-footer">
+    <div class="container">
+      <a href="../index.html#projects" class="btn-ghost">BACK TO ALL PROJECTS</a>
+      <p>&copy; 2026 Mahmoud Shamekh &mdash; All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+
+</html>

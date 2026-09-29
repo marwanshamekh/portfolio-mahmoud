@@ -43,7 +43,7 @@
 
   /* ── Home: Hero / Intro ── */
   .intro-title-line {
-    font-size: clamp(4rem, 12vw, 8rem);
+    font-size: clamp(4rem, 20vw, 11rem);
   }
 
   .intro-badge {
@@ -58,27 +58,17 @@
     height: 120px;
   }
 
-  /* ── Home: About ── */
-  .about-section {
-    padding: 6rem 0 4.5rem;
+  /* ── Home: Hero ── */
+  .hero-bio {
+    display: none;
   }
 
-  .about-card {
-    padding: 2.5rem;
+  .hero-cta {
+    bottom: 2rem;
   }
 
-  .about-card-inner {
-    grid-template-columns: 240px 1fr;
-    gap: 2.5rem;
-  }
-
-  .about-headline {
-    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
-    margin-bottom: 1.4rem;
-  }
-
-  .about-bio-text p {
-    font-size: 0.9rem;
+  .hero-portrait {
+    height: min(50vh, 640px);
   }
 
   /* ── Home: Experience ── */
@@ -123,16 +113,6 @@
   /* ── Home: Skills ── */
   .skills-section {
     padding: 5rem 0;
-  }
-
-  .marquee-content {
-    font-size: 2.2rem;
-    gap: 1.4rem;
-    padding-right: 1.4rem;
-  }
-
-  .diamond {
-    font-size: 1.8rem;
   }
 
   /* ── Home: Education ── */
@@ -306,69 +286,46 @@
   }
 
   .intro-title-line {
-    font-size: clamp(3rem, 16vw, 5.5rem);
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 24vw, 7.5rem);
+    margin-bottom: 0;
   }
 
   .intro-badge {
-    width: 90px;
-    height: 90px;
-    bottom: 1.5rem;
-    right: 1.2rem;
+    width: 76px;
+    height: 76px;
+    bottom: 5.2rem;
+    right: 0.8rem;
   }
 
   .intro-badge-svg {
-    width: 90px;
-    height: 90px;
+    width: 76px;
+    height: 76px;
   }
 
-  /* ── Home: About ── */
-  .about-section {
-    padding: 4rem 0 3rem;
+  /* ── Home: Hero ── */
+  .intro-section {
+    min-height: 600px;
   }
 
-  .about-main-title {
-    font-size: clamp(3rem, 14vw, 5rem);
-    margin-bottom: 1rem;
+  .intro-container {
+    padding-top: calc(var(--nav-h) + 3vh);
   }
 
-  .about-divider {
-    margin-bottom: 2rem;
+  .hero-bio {
+    display: none;
   }
 
-  .about-card {
-    padding: 1.5rem;
-    border-radius: 14px;
+  .hero-portrait {
+    height: min(52vh, 440px);
   }
 
-  .about-card-inner {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .hero-cta {
+    bottom: 1.5rem;
+    gap: 0.6rem;
   }
 
-  .about-col-left {
-    max-width: 280px;
-    margin: 0 auto;
-  }
-
-  .about-headline {
-    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
-    margin-bottom: 1.2rem;
-    text-align: center;
-  }
-
-  .about-bio-text p {
-    font-size: 0.88rem;
-  }
-
-  .about-cta-row {
-    justify-content: center;
-  }
-
-  .btn-primary,
-  .btn-ghost {
-    font-size: 0.65rem;
-    padding: 0.75rem 1.4rem;
+  .intro-title-outline {
+    -webkit-text-stroke-width: 1.5px;
   }
 
   /* ── Home: Experience ── */
@@ -510,22 +467,6 @@
   /* ── Home: Skills ── */
   .skills-section {
     padding: 4rem 0;
-  }
-
-  .marquee-content {
-    font-size: 1.6rem;
-    gap: 1rem;
-    padding-right: 1rem;
-    letter-spacing: 0.1em;
-  }
-
-  .diamond {
-    font-size: 1.2rem;
-  }
-
-  .marquee-wrapper {
-    padding: 1.5rem 0;
-    margin-top: 1rem;
   }
 
   /* ── Home: Education ── */
@@ -749,4 +690,30 @@
   }
 
 
+}
+
+/* About */
+@media (max-width: 900px) {
+  .about-section {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Skills cards */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skills-card {
+    padding: 1.4rem;
+  }
+
+  .skills-card-title {
+    font-size: 1.7rem;
+  }
 }
